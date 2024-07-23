@@ -6,7 +6,6 @@ public class FindSecondHigest {
         int num = findHigest(arr);
         System.out.println(num);
     }
-
     private static int findHigest(int[] arr) {
         int higest = Integer.MIN_VALUE;
         int secondHigest = Integer.MIN_VALUE;
