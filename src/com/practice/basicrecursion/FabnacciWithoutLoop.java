@@ -1,4 +1,4 @@
-package com.practice.other;
+package com.practice.basicrecursion;
 
 public class FabnacciWithoutLoop {
 
@@ -10,6 +10,7 @@ public class FabnacciWithoutLoop {
         String data = callFabnacci(n, n1, n2, stringBuilder);
         System.out.println(data);
     }
+
 
     private static String callFabnacci(int n, int n1, int n2, StringBuilder builder) {
         if (n == 0) {
