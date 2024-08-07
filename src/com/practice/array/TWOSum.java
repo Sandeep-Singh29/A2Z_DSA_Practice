@@ -18,8 +18,8 @@ public class TWOSum {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 3));
-        int target = 6;
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,7,11,15));
+        int target = 13;
         int n = list.size();
         ArrayList<Pair<Integer, Integer>> data = twoSum(list, target, n);
         for (Pair<Integer, Integer> pair : data) {
