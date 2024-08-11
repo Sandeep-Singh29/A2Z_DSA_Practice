@@ -1,8 +1,7 @@
-package com.practice.leetcode;
+package com.practice.leetcode.array;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class MaximunSubArraySumWithArray_59 {
     public static void main(String[] args) {

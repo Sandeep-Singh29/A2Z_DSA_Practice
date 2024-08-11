@@ -1,4 +1,4 @@
-package com.practice.leetcode;
+package com.practice.leetcode.array;
 
 public class MaximumSubArraySum_59 {
     public static void main(String[] args) {

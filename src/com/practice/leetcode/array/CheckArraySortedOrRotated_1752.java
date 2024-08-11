@@ -1,6 +1,5 @@
-package com.practice.leetcode;
+package com.practice.leetcode.array;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
