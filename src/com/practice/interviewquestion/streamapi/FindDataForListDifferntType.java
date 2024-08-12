@@ -150,13 +150,23 @@ public class FindDataForListDifferntType {
         collect.entrySet().forEach(e->{
             e.getValue().stream().filter(e1-> e1.getAge() <= 25).forEach(System.out::println);
         });*/
-
+        /*
         Map<Boolean, List<Employee>> ageWise = employeeList.stream().collect(Collectors.partitioningBy(e -> e.getAge() <= 25));
         List<Employee> lessThan25 = ageWise.get(true);
         List<Employee> greaterThan25 = ageWise.get(false);
         lessThan25.forEach(System.out::println);
         greaterThan25.forEach(System.out::println);
+        */
 
+       // Sorting by Multiple variable
+        /*
+        employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)
+                .thenComparing(Employee::getAge)
+                .thenComparing(Employee::getId)
+                ).forEach(e-> {
+            System.out.println(e.getName()+" : "+e.getSalary()+" : "+e.getAge()+" : "+e.getId());
+        });
+        */
 
     }
 
