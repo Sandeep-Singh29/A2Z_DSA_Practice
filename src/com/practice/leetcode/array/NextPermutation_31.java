@@ -1,8 +1,4 @@
-package com.practice.leetcode;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+package com.practice.leetcode.array;
 
 public class NextPermutation_31 {
     public static void main(String[] args) {
