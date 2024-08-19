@@ -1,26 +1,31 @@
 package com.practice.leetcode.array;
 
-import java.util.Arrays;
 
 public class MaximumProductSubArray_152 {
 
-    public static int maxProduct(int[] nums) {  //-2, 3, -4
-        int maxPro = Integer.MIN_VALUE;
-        int start = nums[0];
-        int product =start;
+    public static int maxProduct(int[] nums) {
+        int ans = nums[0];
+        int dpMin = nums[0];
+        int dpMax = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            product *= nums[i];
-            maxPro = Math.max(maxPro,product);
+            final int num = nums[i];
+            final int prevMin = dpMin;
+            final int prevMax = dpMax;
+            if (num < 0) {
+                dpMin = Math.min(prevMax * num, num);
+                dpMax = Math.max(prevMin * num, num);
+            } else {
+                dpMin = Math.min(prevMin * num, num);
+                dpMax = Math.max(prevMax * num, num);
+            }
+            ans = Math.max(ans, dpMax);
         }
-        int last = nums[nums.length - 1];
-        if(maxPro<last){
-            return last;
-        }
-        return maxPro;
+
+        return ans;
     }
 
     public static void main(String[] args) {
-        int arr[] = {-3,0,1,-2};
+        int arr[] = {-2,0,-1};
         int sum = maxProduct(arr);
         System.out.println(sum);
     }
