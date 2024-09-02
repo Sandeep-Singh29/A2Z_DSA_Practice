@@ -4,31 +4,32 @@ package com.practice.leetcode.string;
 public class StringToInteger_8 {
 
     public static int myAtoi(String s) {
-        String str = s.replaceAll(" ", "");
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < str.length(); i++) {
-            if (Character.isDigit(str.charAt(i)) || (int) str.charAt(i) == 45) {
-                builder.append(str.charAt(i));
-            } else {
-
+        s = s.strip();
+        if (s.isEmpty()) {
+            return 0;
+        }
+        int sign = s.charAt(0) == '-' ? -1 : 1;
+        long ans = 0;
+        if (s.charAt(0) == '+' || s.charAt(0) == '-') {
+            s = s.substring(1);
+        }
+        for (char c : s.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                break;
+            }
+            ans = ans * 10 + (c - '0');
+            if (sign * ans <= Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
+            }
+            if (sign * ans >= Integer.MAX_VALUE) {
+                return Integer.MAX_VALUE;
             }
         }
-        System.out.println(builder);
-        if (str.contains("-") && !str.startsWith("-")) {
-            String[] split = builder.toString().split("-");
-            int first = Integer.parseInt(split[0]);
-            int second = Integer.parseInt(split[1]);
-            int res = first - second;
-            if (res < 0) {
-                return 0;
-            }
-            return res;
-        }
-        return Integer.parseInt(builder.toString());
+        return sign * (int) ans;
     }
 
     public static void main(String[] args) {
-        String s = "1337c0d3";
+        String s = "    -04     2   ";
         int i = myAtoi(s);
         System.out.println(i);
     }
