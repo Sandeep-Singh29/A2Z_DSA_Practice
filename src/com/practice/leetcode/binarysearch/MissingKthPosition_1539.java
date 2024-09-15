@@ -1,27 +1,31 @@
 package com.practice.leetcode.binarysearch;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class MissingKthPosition_1539 {
 
     private static int findKthPositive(int[] arr, int k) {
-        List<Integer> list = new LinkedList<>();
-        if (arr[0] != 1) {
-            list.add(1);
+        int num = 1;
+        int i = 0;
+        int len = arr.length;
+        while (i<len && k>0){
+            if(arr[i]==num){
+                i++;
+            }else{
+                k--;
+            }
+            num++;
+        }
+        while(k>0){
+            num++;
             k--;
         }
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = arr[i - 1]; j < arr[i]; j++) {
-                list.add(arr[j]);
-            }
-        }
-        return list.get(k);
+        return num-1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 3, 4, 7, 11};
-        int k = 5;
+        int[] arr = {1,2,3,4};
+        int k = 3;
         int kthPositive = findKthPositive(arr, k);
         System.out.println(kthPositive);
 
