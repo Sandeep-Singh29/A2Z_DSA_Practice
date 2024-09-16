@@ -30,7 +30,7 @@ public class ArrayToLinkedListGFG {
         for(int i=1; i< arr.length; i++){
             Node curr = new Node(arr[i]);
             head.next = curr;
-            curr = head.next;
+            head = head.next;
         }
         return head.next;
     }
