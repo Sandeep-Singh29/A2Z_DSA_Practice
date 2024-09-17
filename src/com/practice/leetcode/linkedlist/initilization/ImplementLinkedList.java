@@ -37,33 +37,60 @@ public class ImplementLinkedList {
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
+        System.out.println();
     }
 
-    public int size() {
-       return size;
+    public void size() {
+        System.out.println(size);
     }
 
     private void insertAtHead(int data) {
         Node newHead = new Node(data);
-        if(head==null){
+        if (head == null) {
             head = newHead;
             tail = newHead;
-        }else{
+        } else {
             newHead.next = head;
             head = newHead;
         }
+        size++;
     }
 
     private void set(int idx, int data) {
+        if(idx==0){
+            insertAtHead(data);
+            return;
+        }
+        if(idx==size){
+            insertAtTail(data);
+            return;
+        }
+        if(idx>size){
+            System.out.println("Invalid Index..!!  ");
+            return;
+        }
+        Node temp = head;
         Node newNode = new Node(data);
-
-        if(head==null){
+        if (head == null) {
             head = newNode;
             tail = newNode;
-        }else{
-            while(head!=null){
-
+        } else {
+           /* while (temp != null) {
+                if (idx - 1 == 0) {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                    size++;
+                    break;
+                }
+                idx--;
+                temp = temp.next;
+            }*/
+            for(int i=0;i<idx-1;i++){
+                temp = temp.next;
             }
+            newNode.next = temp.next;
+            temp.next = newNode;
+            size++;
         }
     }
 
@@ -72,19 +99,13 @@ public class ImplementLinkedList {
         list.insertAtTail(10);
         list.insertAtTail(12);
         list.insertAtTail(40);
-        list.insertAtTail(15);
+        list.size();
+        list.insertAtHead(1);
         list.display();
-        System.out.println();
-        list.insertAtTail(100);
+        list.size();
+        list.set(2,30);
         list.display();
-        System.out.println();
-        System.out.println("Size of List: " + list.size()); // Using size() method
-        list.insertAtTail(200);
-        System.out.println("Size of List: " + list.size()); // Using size() method
-        list.insertAtHead(7);
-        list.display();
-        list.set(3,500);
-
+        list.size();
     }
 
 
