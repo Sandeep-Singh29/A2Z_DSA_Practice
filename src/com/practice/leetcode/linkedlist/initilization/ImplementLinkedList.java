@@ -1,42 +1,30 @@
 package com.practice.leetcode.linkedlist.initilization;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Spliterator;
+import java.util.Arrays;
 
-class LinkList {
+class Node {
+    int val;
+    Node next;
+
+    Node(int val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+
+public class ImplementLinkedList {
     Node head;
     Node tail;
     int size;
 
-    class Node {
-        int val;
-        Node next;
-
-        Node(int val) {
-            this.val = val;
-        }
-
-        Node(Node next, int val) {
-            this.next = next;
-            this.val = val;
-        }
-    }
-
-    public void insertAtEnd(int i) {
+    public void insertAtTail(int i) {
         Node node = new Node(i);
         if (head == null) {
             head = node;
             tail = node;
         } else {
-            /*while(true){
-                if(head.next==null){
-                    head.next = node;
-                    break;
-                }
-                head = head.next;
-            }*/
             tail.next = node;
             tail = node;
         }
@@ -51,33 +39,60 @@ class LinkList {
         }
     }
 
-//    public int size() {
-//        Node temp = head;
-//        while(temp!=null){
-//            size++;
-//            temp = temp.next;
-//        }
-//        return size;
-//    }
+    public int size() {
+       return size;
+    }
+
+    private void insertAtHead(int data) {
+        Node newHead = new Node(data);
+        if(head==null){
+            head = newHead;
+            tail = newHead;
+        }else{
+            newHead.next = head;
+            head = newHead;
+        }
+    }
+
+    private void set(int idx, int data) {
+        Node newNode = new Node(data);
+
+        if(head==null){
+            head = newNode;
+            tail = newNode;
+        }else{
+            while(head!=null){
+
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        ImplementLinkedList list = new ImplementLinkedList();
+        list.insertAtTail(10);
+        list.insertAtTail(12);
+        list.insertAtTail(40);
+        list.insertAtTail(15);
+        list.display();
+        System.out.println();
+        list.insertAtTail(100);
+        list.display();
+        System.out.println();
+        System.out.println("Size of List: " + list.size()); // Using size() method
+        list.insertAtTail(200);
+        System.out.println("Size of List: " + list.size()); // Using size() method
+        list.insertAtHead(7);
+        list.display();
+        list.set(3,500);
+
+    }
+
 
 }
 
-public class ImplementLinkedList {
-    public static void main(String[] args) {
-        LinkList list = new LinkList();
-        list.insertAtEnd(10);
-        list.insertAtEnd(12);
-        list.insertAtEnd(40);
-        list.insertAtEnd(15);
-        list.display();
-        System.out.println();
-        list.insertAtEnd(100);
-        list.display();
-//        int size = list.size();
-        System.out.println();
-        System.out.println("Size of List :  "+list.size);
-        list.insertAtEnd(0);
-        System.out.println("Size of List :  "+list.size);
+
+/*
+        // Example usage of java.util.LinkedList
         List<Integer> l = new LinkedList<>();
         l.add(10);
         l.add(42);
@@ -85,14 +100,9 @@ public class ImplementLinkedList {
         l.add(10);
         l.add(42);
 
-    }
-}
-
-
-    /*System.out.println(l);
-        l.set(0,3);
-        System.out.println(l);
-int[] array1 = l.stream().mapToInt(Integer::intValue).toArray();
-        System.out.println("Array  "+Arrays.toString(array1));
-
-     */
+        System.out.println("LinkedList: " + l);
+        l.set(0, 3);
+        System.out.println("Updated LinkedList: " + l);
+        int[] array1 = l.stream().mapToInt(Integer::intValue).toArray();
+        System.out.println("Array: " + Arrays.toString(array1));
+        */

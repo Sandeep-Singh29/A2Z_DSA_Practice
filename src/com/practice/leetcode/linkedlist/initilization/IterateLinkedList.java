@@ -1,7 +1,6 @@
 package com.practice.leetcode.linkedlist.initilization;
 
 public class IterateLinkedList {
-
     static class Node {
         Node next;
         int val;
