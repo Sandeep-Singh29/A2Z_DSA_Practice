@@ -94,6 +94,33 @@ public class ImplementLinkedList {
         }
     }
 
+    private int get(int idx) {
+        Node temp = head;
+        while(idx>0 && temp!=null){
+            temp = temp.next;
+            idx--;
+        }
+//        System.out.println(temp.val);
+        return temp.val;
+    }
+
+    private void delete(int idx) {  // 1-> 10-> 30-> 12-> 40-> null
+        if(idx>size-1 || idx<0){
+            System.out.println("Invalid Index");
+            return;
+        }
+        Node node = head;
+        if(idx==0){
+            head = head.next;
+            return;
+        }
+        for(int i=0; i<idx-1;i++){
+            node = node.next;
+        }
+        node.next = node.next.next;
+        size--;
+    }
+
     public static void main(String[] args) {
         ImplementLinkedList list = new ImplementLinkedList();
         list.insertAtTail(10);
@@ -106,7 +133,16 @@ public class ImplementLinkedList {
         list.set(2,30);
         list.display();
         list.size();
+        System.out.println("Get Element By index 2 :  "+list.get(2));
+        list.delete(4);
+        list.display();
+
+        int a = 4;
+        int b = (int)7/2;
+        System.out.println(b);
     }
+
+
 
 
 }
