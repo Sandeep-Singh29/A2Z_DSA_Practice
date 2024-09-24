@@ -25,16 +25,16 @@ public class RemoveNthNodeIntoEnd_19 {
     public static void main(String[] args) {
         Node head = new Node(1);
         Node a = new Node(2);
-//        Node b = new Node(3);
-//        Node c = new Node(4);
-//        Node d = new Node(5);
+        Node b = new Node(3);
+        Node c = new Node(4);
+        Node d = new Node(5);
         head.next = a;
-//        a.next = b;
-//        b.next = c;
-//        c.next = d;
-//        d.next = null;
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = null;
         Node.displayList(head);
-        int node = 1;
+        int node = 2;
 //        Node afterRemove = removeNthFromEnd(head, node);
 //        Node.displayList(afterRemove);
         Node way2 = removeNthFromEndWay2(head, node);
