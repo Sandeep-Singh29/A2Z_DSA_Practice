@@ -70,7 +70,7 @@ public class IntersectionOfTwoLL_160 {
         Node.displayList(head2);
 
         Node intersectionNode = getIntersectionNode(head1, head2);
-        System.out.println(intersectionNode);
+        Node.displayList(intersectionNode);
 
 
 

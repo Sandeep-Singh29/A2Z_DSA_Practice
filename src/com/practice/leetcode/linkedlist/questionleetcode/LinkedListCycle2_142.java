@@ -45,7 +45,7 @@ public class LinkedListCycle2_142 {
         b.next = c;
         c.next = a;
         Node node = detectCycle(head);
-        System.out.println(node);
+        
     }
 
 }
