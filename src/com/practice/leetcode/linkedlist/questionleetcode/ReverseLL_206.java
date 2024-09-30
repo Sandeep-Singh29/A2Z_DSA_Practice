@@ -31,10 +31,9 @@ public class ReverseLL_206 {
         if (head == null || head.next == null) {
             return head;
         }
-        // Recur for the rest of the list
-        Node newHead = reverseListUsingRecursion(head.next);
-        // Adjust the pointers
-        head.next.next = head;  // Make the next node point to the current node
+        Node a = head.next;
+        Node newHead = reverseListUsingRecursion(a);
+        a.next = head;  // Make the next node point to the current node
         head.next = null;       // Set the current node's next to null to avoid a cycle
         return newHead;
     }
@@ -54,6 +53,20 @@ public class ReverseLL_206 {
 //        Node.displayList(node);
         Node node1 = reverseListUsingRecursion(head);
         Node.displayList(node1);
+//        Node result = reverseListUsing3Variavle(head);
+//        Node.displayList(result);
+    }
+
+    private static Node reverseListUsing3Variavle(Node head) {// 1 2 3 4 5 null
+        Node previous = null;
+        Node current = head;
+        while (current != null) {
+            Node nextNode = current.next;
+            current.next = previous;
+            previous = current;
+            current = nextNode;
+        }
+        return previous;
     }
 
 }
