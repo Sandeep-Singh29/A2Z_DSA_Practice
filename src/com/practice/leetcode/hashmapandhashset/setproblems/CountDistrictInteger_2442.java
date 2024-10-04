@@ -1,4 +1,4 @@
-package com.practice.leetcode.hashmapandhashset;
+package com.practice.leetcode.hashmapandhashset.setproblems;
 
 import java.util.HashSet;
 
