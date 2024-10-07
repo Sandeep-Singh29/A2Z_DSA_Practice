@@ -7,14 +7,14 @@ import java.util.Set;
 
 public class FindLongestSubStringWithOutRepeatChar {
     public static void main(String[] args) {
-        String str = "cabdzabcd";
+        String str = "abaade";
 //        String largestStr = findLargestStr(str);
 //        System.out.println(largestStr);
 //        System.out.println(largestStr.length());
-        int largest = findLargestStrOptimal(str);
-        System.out.println(largest);
+//        int largest = findLargestStrOptimal(str);
+//        System.out.println(largest);
         int map = findLargestStrOptimalUsingMap(str);
-        System.out.println(largest);
+        System.out.println(map);
     }
 
     private static int findLargestStrOptimalUsingMap(String str) {
@@ -22,9 +22,9 @@ public class FindLongestSubStringWithOutRepeatChar {
         int start =0;
         Map<Character,Integer> map = new HashMap<>();
         for(int end =0;end<str.length();end++){
-            char c = str.charAt(end);
-            if(map.containsKey(c)){
-                if(start<=map.get(c)){
+            char c = str.charAt(end); // check str chatAt
+            if(map.containsKey(c)){  // map hai ch hai ki nahi ?
+                if(start<=map.get(c)){ //
                     start = map.get(c)+1;
                 }
             }
