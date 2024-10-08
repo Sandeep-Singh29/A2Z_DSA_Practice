@@ -13,10 +13,16 @@ MIN - Heap(PriorityQueue) ek aisa data structure hai jab bhi hum isma
 element add karata hai to bo hamsa small
 element top main rakhta hai.
 
+PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder()); Agar aap aisa karata hai to Kam sa jadha hoga
+
+
 <MAX HEAP>
 MAX - Heap(PriorityQueue) ek aisa data structure hai jab bhi hum isma
 element add karata hai to bo hamsa greater
 element top main rakhta hai.
+
+ PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());   Agar aap Collections.reverseOrder() karata hai to decreasing wise jadha sa kam
+
 
 */
 

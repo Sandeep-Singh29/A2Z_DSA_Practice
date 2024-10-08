@@ -37,10 +37,22 @@ class Student /*implements Comparable<Student>*/ {
                 '}';
     }
 
-//    @Override
-//    public int compareTo(Student stu) {
-//        return this.roll - stu.roll;
-//    }
+
+    /*      Sorting By Roll NUmber
+
+    @Override
+    public int compareTo(Student stu) {
+        return this.roll - stu.roll;
+    }
+    */
+
+
+   /*      Sorting By Name
+    @Override
+    public int compare(Student s1, Student s2) {
+        return s1.name.compareTo(s2.name);
+    }
+    */
 }
 
 public class CustomComprator {
@@ -68,7 +80,21 @@ public class CustomComprator {
             }
         });
     */
-        Arrays.sort(st, (s1, s2) -> s1.roll - s2.roll);  // Way 2 to use Compartor usingg Lamda
+        //Sorting By roll Number
+        //Arrays.sort(st, (s1, s2) -> s1.roll - s2.roll);  // Way 2 to use Compartor usingg Lamda
+
+        // Sorting using Name     Way >>1
+        // Arrays.sort(st,(s1,s2)-> s1.name.compareTo(s2.name));
+
+        /*
+        Arrays.sort(st, new Comparator<Student>() {            // Way 2 Soting using Name
+            @Override
+            public int compare(Student s1, Student s2) {
+                return s1.name.compareTo(s2.name);
+            }
+        });
+        */
+
         System.out.println("After Sort");
         printStu(st);
     }
