@@ -1,4 +1,4 @@
-package com.practice.leetcode.hashmapandhashset;
+package com.practice.leetcode.heaps;
 
 import java.util.ArrayList;
 import java.util.List;
