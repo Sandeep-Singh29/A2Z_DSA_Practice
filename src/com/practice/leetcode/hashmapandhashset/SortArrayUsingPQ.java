@@ -24,6 +24,7 @@ public class SortArrayUsingPQ {
         return list;
     }
 
+
     public static void main(String[] args) {
         int arr[] = {8, 7, 6, 4, 1, 6, 7, 8,};
         List<Integer> res = sortArray(arr);

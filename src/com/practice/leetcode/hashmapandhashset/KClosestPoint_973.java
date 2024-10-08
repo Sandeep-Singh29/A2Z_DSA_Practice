@@ -26,6 +26,7 @@ public class KClosestPoint_973 {
                 pq.remove();
             }
         }
+
         int[][] res = new int[k][2];
         int i = 0;
         while (!pq.isEmpty()) {

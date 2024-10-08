@@ -11,6 +11,7 @@ import java.util.PriorityQueue;
 
 public class NearlySortedUsingPriorityQueue {
 
+
     private static List<Integer> sortArray(int[] arr, int k) {
         List<Integer> list = new ArrayList<>();
         PriorityQueue<Integer> pq = new PriorityQueue<>();
