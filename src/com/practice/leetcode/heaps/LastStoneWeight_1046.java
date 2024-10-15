@@ -16,15 +16,15 @@ public class LastStoneWeight_1046 {
         }
         while (list.size() > 1) {
             Collections.sort(list);
-            int x = list.remove(list.size() - 1);
-            int y = list.remove(list.size() - 1);
+            int x = list.removeLast();
+            int y = list.removeLast();
             if (x != y) {
                 list.add(x - y);
             }
         }
-        if (list.size() == 0) {
+        if (list.isEmpty()) {
             return 0;
-        } else return list.get(0);
+        } else return list.getFirst();
     }
 
     private static int lastStoneWeightway2Optiomal(int[] stones) {
@@ -39,7 +39,7 @@ public class LastStoneWeight_1046 {
                 pq.add(x-y);
             }
         }
-        if(pq.size()==0) return 0;
+        if(pq.isEmpty()) return 0;
         return pq.remove();
     }
 
