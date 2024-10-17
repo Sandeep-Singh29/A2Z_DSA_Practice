@@ -1,0 +1,11 @@
+Sliding Window Question Working on
+* SubArray
+* subString
+
+***
+How to check question is related to sliding window
+* K size subArray
+* Variable Sized
+* k Sized
+* find largest subString
+* find largest subArray
