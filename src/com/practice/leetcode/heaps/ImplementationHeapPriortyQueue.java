@@ -1,5 +1,10 @@
 package com.practice.leetcode.heaps;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Author: SANDEEP
  * Date: 14-10-2024
@@ -86,6 +91,16 @@ class MinHeap {
         downHeapify(minIdx); 
     }
 
+    public int[] sort(MinHeap heap) {
+        int len = size;
+        int []arr = new int[size];
+        for(int i=0;i<len;i++){
+            int val = heap.remove();
+            arr[i] = val;
+        }
+        return arr;
+    }
+
 }
 
 public class ImplementationHeapPriortyQueue {
@@ -97,15 +112,19 @@ public class ImplementationHeapPriortyQueue {
         heap.add(1);
         heap.add(2);
         heap.add(0);
-        System.out.println("Remove Element : "+heap.remove());
-        System.out.println("Peek Element of Min Heap is : " + heap.peek());
-        System.out.println("Size Of Min Heap Is : " + heap.size());
+//        System.out.println("Remove Element : "+heap.remove());
+//        System.out.println("Peek Element of Min Heap is : " + heap.peek());
+//        System.out.println("Size Of Min Heap Is : " + heap.size());
         heap.add(4);
         heap.add(10);
-        System.out.println("Remove Element : "+heap.remove());
+//        System.out.println("Remove Element : "+heap.remove());
         heap.add(3);
-        System.out.println("Peek Element of Min Heap is : " + heap.peek());
-        System.out.println("Size Of Min Heap Is : " + heap.size());
+//        System.out.println("Peek Element of Min Heap is : " + heap.peek());
+//        System.out.println("Size Of Min Heap Is : " + heap.size());
+        int[] sort = heap.sort(heap);
+        System.out.println(Arrays.toString(sort));
+
+
     }
 
 }
