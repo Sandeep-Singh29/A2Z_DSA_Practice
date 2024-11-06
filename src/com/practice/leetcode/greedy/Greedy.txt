@@ -1,0 +1,20 @@
+Greedy approach ek algorithmic strategy hai jisme decision making har step
+par is basis par kiya jata hai ki us waqt ka best possible option choose kiya jaye,
+bina future ke consequences ko consider kiye.
+Matlab, current step pe jo bhi best choice lagti hai,
+woh select ki jati hai aur phir agli problem pe aage badhte hain.
+
+Example
+Ek common example hai Coin Change Problem. Malijiye aapke paas kuch coins hain –
+1 Rs, 2 Rs, 5 Rs, aur 10 Rs – aur aapko 18 Rs banana hai.
+Greedy approach ke hisaab se, hum har baar sabse bada coin choose karenge jo us waqt
+humare target se kam ya barabar ho.
+
+Sabse pehle hum 10 Rs ka coin choose karenge, kyunki woh humare target (18 Rs) ke andar aata hai.
+
+Ab bacha hua amount hai: 18 - 10 = 8 Rs.
+
+Ab hum 5 Rs ka coin lenge. Bacha hua amount: 8 - 5 = 3 Rs.
+Ab hum 2 Rs ka coin lenge. Bacha hua amount: 3 - 2 = 1 Rs.
+Ab hum 1 Rs ka coin lenge. Ab humara amount pura ho gaya hai: 0 Rs.
+Toh is tareeke se humne 18 Rs banane ke liye 10 + 5 + 2 + 1 Rs ka combination use kiya.
