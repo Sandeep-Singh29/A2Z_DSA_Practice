@@ -39,8 +39,7 @@ public class RearrangePositiveAndNegative1Skip_2149 {
                 A.set(index, neg.get(i));
                 index++;
             }
-        }
-        else {
+        } else {
             for (int i = 0; i < neg.size(); i++) {
                 A.set(2 * i, pos.get(i));
                 A.set(2 * i + 1, neg.get(i));

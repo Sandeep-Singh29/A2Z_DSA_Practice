@@ -1,7 +1,5 @@
 package com.practice.leetcode.string;
 
-import java.util.Arrays;
-
 public class ValidAnagram_242 {
 
     public static boolean isAnagram(String s, String t) {
@@ -26,12 +24,12 @@ public class ValidAnagram_242 {
 
         // Way ... 3
         String result = t;
-        for(int i=0;i<s.length();i++){
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if(result.contains(String.valueOf(c))){
+            if (result.contains(String.valueOf(c))) {
                 String replace = result.replace(String.valueOf(c), "");
                 result = replace;
-            }else{
+            } else {
                 return false;
             }
         }

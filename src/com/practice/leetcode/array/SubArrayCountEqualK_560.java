@@ -1,13 +1,11 @@
 package com.practice.leetcode.array;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SubArrayCountEqualK_560 {
     public static void main(String[] args) {
-        int arr[] = {1, 2, 3,-3, 1, 1, 1, 4, 2, -3 }; //
+        int arr[] = {1, 2, 3, -3, 1, 1, 1, 4, 2, -3}; //
         int k = 3;
 //        int count = subArrayCountBrute(arr, k);
 //        System.out.println(count);
@@ -37,14 +35,14 @@ public class SubArrayCountEqualK_560 {
     }
 
     private static int subArrayCountBetter(int[] arr, int k) {
-        int count =0;
-        for(int i=0;i<arr.length;i++){
-            int sum =0;
-            for (int j=i;j<arr.length;j++){
-                    sum+=arr[j];
-                    if(sum==k){
-                        count++;
-                    }
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int sum = 0;
+            for (int j = i; j < arr.length; j++) {
+                sum += arr[j];
+                if (sum == k) {
+                    count++;
+                }
             }
         }
 

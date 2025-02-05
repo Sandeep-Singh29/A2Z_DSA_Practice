@@ -1,8 +1,6 @@
 package com.practice.practice;
 
 
-import java.util.Arrays;
-
 /**
  * Author: SANDEEP
  * Date: 15/01/25

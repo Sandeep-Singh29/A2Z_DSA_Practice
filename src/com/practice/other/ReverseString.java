@@ -10,7 +10,7 @@ public class ReverseString {
         System.out.println(n);
         String d = reverseData(data);
         System.out.println(d);
-        String c  = firstCharCapital(data);
+        String c = firstCharCapital(data);
 
     }
 
@@ -21,7 +21,7 @@ public class ReverseString {
     private static String reverseData(String data) {
         StringBuilder stringBuilder = new StringBuilder();
         String[] s = data.split(" ");
-        for(int i = s.length-1; i>=0 ; i--){
+        for (int i = s.length - 1; i >= 0; i--) {
             stringBuilder.append(s[i]).append(" ");
         }
         return stringBuilder.toString().trim();

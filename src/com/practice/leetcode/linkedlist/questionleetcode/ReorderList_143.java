@@ -32,7 +32,7 @@ public class ReorderList_143 {
         copy.next = new Node(fast.val);
         Node temp = dummy.next;
         while (temp != null) {
-            System.out.print(temp.val+" ");
+            System.out.print(temp.val + " ");
             temp = temp.next;
         }
     }

@@ -4,10 +4,10 @@ public class DeleteNodeLinkedList_237 {
 
     private static void deleteNode(Node node, int data) {
         Node temp = node;
-        while (temp!=null && temp.next!=null) {
-            if(temp.next.val == data){
+        while (temp != null && temp.next != null) {
+            if (temp.next.val == data) {
                 temp.next = temp.next.next;
-            }else{
+            } else {
                 temp = temp.next;
             }
         }

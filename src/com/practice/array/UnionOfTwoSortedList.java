@@ -1,7 +1,6 @@
 package com.practice.array;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 public class UnionOfTwoSortedList {
     public static void main(String[] args) {
@@ -33,13 +32,13 @@ public class UnionOfTwoSortedList {
         int j = 0;
         while (i < ar1 && 0 < ar2) {
             if (arr1[i] <= arr2[j]) {
-                if (list.isEmpty() || list.get(list.size()-1) != arr1[i]) {
+                if (list.isEmpty() || list.get(list.size() - 1) != arr1[i]) {
                     list.add(arr1[i]);
                 }
                 i++;
             } else {
                 if (arr1[i] >= arr2[j]) {
-                    if (list.isEmpty() || list.get(list.size()-1) != arr2[j]) {
+                    if (list.isEmpty() || list.get(list.size() - 1) != arr2[j]) {
                         list.add(arr2[j]);
                     }
                     j++;
@@ -48,13 +47,13 @@ public class UnionOfTwoSortedList {
         }
 
         while (i < ar1) {
-            if (list.isEmpty() || list.get(list.size()-1) != arr1[i]) {
+            if (list.isEmpty() || list.get(list.size() - 1) != arr1[i]) {
                 list.add(arr1[i]);
             }
             i++;
         }
         while (j < ar2) {
-            if (list.isEmpty() || list.get(list.size()-1) != arr2[j]) {
+            if (list.isEmpty() || list.get(list.size() - 1) != arr2[j]) {
                 list.add(arr2[j]);
             }
             j++;

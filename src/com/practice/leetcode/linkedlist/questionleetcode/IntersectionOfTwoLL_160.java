@@ -1,7 +1,5 @@
 package com.practice.leetcode.linkedlist.questionleetcode;
 
-import java.util.Arrays;
-
 public class IntersectionOfTwoLL_160 {
 
     private static Node getIntersectionNode(Node headA, Node headB) {
@@ -9,26 +7,26 @@ public class IntersectionOfTwoLL_160 {
         Node temp2 = headB;
         int len1 = 0;
         int len2 = 0;
-        while (temp1!=null) {
+        while (temp1 != null) {
             len1++;
             temp1 = temp1.next;
         }
-        while (temp2!=null) {
+        while (temp2 != null) {
             len2++;
             temp2 = temp2.next;
         }
         temp1 = headA;
         temp2 = headB;
-        if(len1>len2){
-            for(int i=0;i<len1-len2;i++){
+        if (len1 > len2) {
+            for (int i = 0; i < len1 - len2; i++) {
                 temp1 = temp1.next;
             }
-        }else {
-            for(int i=0;i<len2-len1;i++){
+        } else {
+            for (int i = 0; i < len2 - len1; i++) {
                 temp2 = temp2.next;
             }
         }
-        while(temp1!=temp2){
+        while (temp1 != temp2) {
             temp1 = temp1.next;
             temp2 = temp2.next;
         }
@@ -71,7 +69,6 @@ public class IntersectionOfTwoLL_160 {
 
         Node intersectionNode = getIntersectionNode(head1, head2);
         Node.displayList(intersectionNode);
-
 
 
     }

@@ -3,15 +3,6 @@ package com.practice.leetcode.linkedlist.initilization;
 
 public class LinkedListInitilized {
 
-    static class Node {
-        Node next;
-        int val;
-
-        Node(int val) {
-            this.val = val;
-        }
-    }
-
     public static void main(String[] args) {
         Node head = new Node(10);
         Node a = new Node(20);
@@ -36,5 +27,14 @@ public class LinkedListInitilized {
         System.out.println("b : " + head.next.next.val);
         System.out.println("c : " + head.next.next.next.val);
         System.out.println("d : " + head.next.next.next.next.val);
+    }
+
+    static class Node {
+        Node next;
+        int val;
+
+        Node(int val) {
+            this.val = val;
+        }
     }
 }

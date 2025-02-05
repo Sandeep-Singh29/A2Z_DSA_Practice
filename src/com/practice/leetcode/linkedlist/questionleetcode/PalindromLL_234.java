@@ -53,14 +53,14 @@ public class PalindromLL_234 {
     private static boolean isPalindromeUsingBestApproach(Node head) {
         Node slow = head;
         Node fast = head;
-        while(fast!=null && fast.next!=null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
         Node reverse = reverseList(slow);
         Node check = head;
-        while(reverse!=null){
-            if(reverse.val!= check.val){
+        while (reverse != null) {
+            if (reverse.val != check.val) {
                 return false;
             }
             reverse = reverse.next;
@@ -79,7 +79,7 @@ public class PalindromLL_234 {
         Node newNode = new Node(-1);
         Node copyNode = newNode;
         int count = 0;
-        while(temp!=null){
+        while (temp != null) {
             temp = temp.next;
             count++;
         }

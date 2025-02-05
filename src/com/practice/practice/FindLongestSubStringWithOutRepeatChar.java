@@ -18,36 +18,36 @@ public class FindLongestSubStringWithOutRepeatChar {
     }
 
     private static int findLargestStrOptimalUsingMap(String str) {
-        int max =0;
-        int start =0;
-        Map<Character,Integer> map = new HashMap<>();
-        for(int end =0;end<str.length();end++){
+        int max = 0;
+        int start = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int end = 0; end < str.length(); end++) {
             char c = str.charAt(end); // check str chatAt
-            if(map.containsKey(c)){  // map hai ch hai ki nahi ?
-                if(start<=map.get(c)){ //
-                    start = map.get(c)+1;
+            if (map.containsKey(c)) {  // map hai ch hai ki nahi ?
+                if (start <= map.get(c)) { //
+                    start = map.get(c) + 1;
                 }
             }
-            map.put(c,end);
-            max = Math.max(max,end-start+1);
+            map.put(c, end);
+            max = Math.max(max, end - start + 1);
         }
-        return max ;
+        return max;
     }
 
     private static int findLargestStrOptimal(String str) {
-        int i =0;
-        int r =0;
+        int i = 0;
+        int r = 0;
         int max = 0;
         Set<Character> set = new HashSet<>();
-        while(r<str.length()){
-            if(set.contains(str.charAt(r))){
-                while (i<r && set.contains(str.charAt(r))){
-                        set.remove(str.charAt(i));
-                        i++;
+        while (r < str.length()) {
+            if (set.contains(str.charAt(r))) {
+                while (i < r && set.contains(str.charAt(r))) {
+                    set.remove(str.charAt(i));
+                    i++;
                 }
             }
             set.add(str.charAt(r));
-            max = Math.max(max,r-i+1);
+            max = Math.max(max, r - i + 1);
             r++;
         }
         return max;
@@ -65,7 +65,7 @@ public class FindLongestSubStringWithOutRepeatChar {
                     if (ans.length() < subStr.length()) {
                         ans = subStr;
                     }
-                }else{
+                } else {
                     break;
                 }
             }

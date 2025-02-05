@@ -30,11 +30,11 @@ public class MaximunNestingDepth_1614 {
     private static int maxDepthStack(String s) {
         int max = 0;
         Stack<Character> stack = new Stack<>();
-        for(char c : s.toCharArray()){
-            if(c=='('){
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
                 stack.push(c);
-                max = Math.max(max,stack.size());
-            }else if(c==')'){
+                max = Math.max(max, stack.size());
+            } else if (c == ')') {
                 stack.pop();
             }
         }

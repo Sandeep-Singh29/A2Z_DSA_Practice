@@ -9,26 +9,26 @@ package com.practice.leetcode.linkedlist.questionleetcode;
 public class LinkedListCycle2_142 {
 
     private static Node detectCycle(Node head) {
-        if(head==null || head.next==null){  // check if sinle number and 2 number
+        if (head == null || head.next == null) {  // check if sinle number and 2 number
             return null;
         }
         Node fast = head;
         Node slow = head;
-        while(fast!=null && fast.next!=null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if(slow==fast){
+            if (slow == fast) {
                 break;
             }
         }
-        if(fast!=slow){
+        if (fast != slow) {
             return null;
         }
         Node check = head;
-        while(check!=slow){
+        while (check != slow) {
             check = check.next;
             slow = slow.next;
-            if(check==slow){
+            if (check == slow) {
                 return slow;
             }
         }
@@ -45,7 +45,7 @@ public class LinkedListCycle2_142 {
         b.next = c;
         c.next = a;
         Node node = detectCycle(head);
-        
+
     }
 
 }

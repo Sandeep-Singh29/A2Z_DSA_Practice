@@ -9,17 +9,17 @@ public class MissingAndRepeating {
         List<Integer> list = new ArrayList<>();
         int start = 1;
         for (int i = 1; i < arr.length; i++) {
-                if(arr[i-1]!=start){
-                    list.add(start);
-                }
-               start++;
+            if (arr[i - 1] != start) {
+                list.add(start);
+            }
+            start++;
             if (arr[i - 1] == arr[i]) {
                 list.add(arr[i - 1]);
             }
         }
         int res[] = new int[list.size()];
-        int j=0;
-        for (int i=list.size()-1; i>=0 ;i--) {
+        int j = 0;
+        for (int i = list.size() - 1; i >= 0; i--) {
             res[j] = list.get(i);
             j++;
         }
@@ -27,7 +27,7 @@ public class MissingAndRepeating {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2,2};
+        int arr[] = {2, 2};
         int[] twoElement = findTwoElement(arr);
         System.out.println(Arrays.toString(twoElement));
     }

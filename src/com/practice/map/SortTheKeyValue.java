@@ -1,16 +1,18 @@
 package com.practice.map;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SortTheKeyValue {
     public static void main(String[] args) {
-        Map<Integer,Integer> map = new HashMap<>();
-        map.put(3,7);
-        map.put(9,7);
-        map.put(2,8);
-        map.put(6,3);
-        map.put(4,1);
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(3, 7);
+        map.put(9, 7);
+        map.put(2, 8);
+        map.put(6, 3);
+        map.put(4, 1);
         System.out.println(map);
 // Default is sort by Key
         LinkedHashMap<Integer, Integer> collect = map.entrySet()

@@ -1,6 +1,9 @@
 package com.practice.leetcode.heaps;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 /**
  * Author: SANDEEP
@@ -18,7 +21,7 @@ public class TopKFrequentElement_347 {
         // sort PQ by value i need to sort by Value in decreasing >> jadha sa kam
         PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((e1, e2) -> e1.getValue() - e2.getValue());
         pq.addAll(map.entrySet()); // add map data into PQ
-        System.out.println("PQ >  "+pq);
+        System.out.println("PQ >  " + pq);
         int[] res = new int[k];
         int i = 0;
         while (!pq.isEmpty()) {

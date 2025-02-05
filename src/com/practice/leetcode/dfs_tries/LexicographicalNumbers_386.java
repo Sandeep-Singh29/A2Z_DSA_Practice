@@ -15,15 +15,15 @@ public class LexicographicalNumbers_386 {
 
     private static void findLexograpicalNumber(int currNum, int n, List<Integer> res) {
         if (currNum > n) {
-            return ;
+            return;
         }
         res.add(currNum);
         for (int append = 0; append <= 9; append++) {
             int insertNum = currNum * 10 + append;
             if (insertNum > n) {
-                return ;
+                return;
             }
-            findLexograpicalNumber(insertNum,n,res);
+            findLexograpicalNumber(insertNum, n, res);
         }
     }
 

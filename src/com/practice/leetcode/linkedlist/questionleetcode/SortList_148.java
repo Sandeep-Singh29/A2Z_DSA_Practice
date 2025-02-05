@@ -13,11 +13,11 @@ public class SortList_148 {
 
 
     private static Node sortList(Node head) {
-        if(head==null || head.next==null) return head;
+        if (head == null || head.next == null) return head;
         Node firstHalf = head;  // pehli list jo mid sa left wala node legi
         Node slow = head;
         Node fast = head;
-        while(fast.next!=null && fast.next.next!=null){ // odd and even list ka mid ko niklna ka liya
+        while (fast.next != null && fast.next.next != null) { // odd and even list ka mid ko niklna ka liya
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -25,7 +25,7 @@ public class SortList_148 {
         slow.next = null; // jaisa mid mai aa gya gaya to uska next ko secondList ko assign karaga
         firstHalf = sortList(firstHalf);
         secondHalf = sortList(secondHalf);
-        Node merge = merge(firstHalf,secondHalf);
+        Node merge = merge(firstHalf, secondHalf);
         return merge;
     }
 
@@ -54,7 +54,7 @@ public class SortList_148 {
         return dummy.next;
     }
 
-    public static Node sortLLBruteForce(Node head){
+    public static Node sortLLBruteForce(Node head) {
         // Create a list to
         // store node values
         List<Integer> arr = new ArrayList<>();
@@ -65,7 +65,7 @@ public class SortList_148 {
 
         // Traverse the linked list and
         // store node values in the list
-        while(temp != null){
+        while (temp != null) {
             arr.add(temp.val);
             temp = temp.next;
         }
@@ -77,7 +77,7 @@ public class SortList_148 {
         // Reassign sorted values to
         // the linked list nodes
         temp = head;
-        for(int i = 0; i < arr.size(); i++){
+        for (int i = 0; i < arr.size(); i++) {
             // Update the node's data
             // with the sorted values
             temp.val = arr.get(i);

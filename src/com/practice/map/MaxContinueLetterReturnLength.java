@@ -1,6 +1,9 @@
 package com.practice.map;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -30,9 +33,9 @@ public class MaxContinueLetterReturnLength {
 //                        LinkedHashMap::new
 //                ));
 //        System.out.println(sortedMapDesc);
-        Map<Character,Integer> map = new HashMap<>();
-        for(char c : d.toCharArray()){
-            map.put(c,map.getOrDefault(c,0)+1);
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : d.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
         PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
         pq.addAll(map.entrySet());

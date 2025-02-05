@@ -4,16 +4,16 @@ public class MiddleListNodeReturn {
 
     private static int returnMiddleNode(Node head) {
         Node temp = head;
-        int count=0;
-        while(temp!=null){
+        int count = 0;
+        while (temp != null) {
             count++;
             temp = temp.next;
         }
-        int size = count/2;
+        int size = count / 2;
         Node dummy = head;
-        int i =0;
-        while(dummy!=null){
-            if(i==size){
+        int i = 0;
+        while (dummy != null) {
+            if (i == size) {
                 return dummy.val;
             }
             i++;
@@ -38,7 +38,6 @@ public class MiddleListNodeReturn {
         Node.displayList(head);
         int middleNode = returnMiddleNode(head);
         System.out.println(middleNode);
-
 
 
     }

@@ -5,7 +5,7 @@ public class PrintLineraly {
         int i = 1;
         int target = 100;
 //        print1toN(i, target);
-        printNto1(i , target);
+        printNto1(i, target);
     }
 
     private static void print1toN(int i, int target) {

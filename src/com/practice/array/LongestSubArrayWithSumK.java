@@ -36,13 +36,13 @@ public class LongestSubArrayWithSumK {
             for (int j = i; j < n; j++) {
                 s += a[j];
                 if (s == k)
-                    len = Math.max(len, j-i+1);
+                    len = Math.max(len, j - i + 1);
             }
         }
         return len;
     }
 
-    public static int getLongestSubarray(int []a, long k) {
+    public static int getLongestSubarray(int[] a, long k) {
         int n = a.length;
         int left = 0, right = 0;
         long sum = a[0];
@@ -63,7 +63,7 @@ public class LongestSubArrayWithSumK {
     }
 
     public static void main(String[] args) {
-        int arr[] = {10, 5, 2, 7, 0, 0, -1,-1, 1, 9}, k = 14;
+        int arr[] = {10, 5, 2, 7, 0, 0, -1, -1, 1, 9}, k = 14;
 //        int i = lenOfLongSubarr(arr, arr.length, k);
 //        System.out.println(i);
         int longestSubarray = getLongestSubarrayway2(arr, k);

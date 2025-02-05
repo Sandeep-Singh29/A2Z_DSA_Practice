@@ -2,6 +2,8 @@ package com.practice;
 
 import java.util.Random;
 
+
+@SuppressWarnings("ALL")
 public class MusicalNotes {
 
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class MusicalNotes {
             int randomIndex = random.nextInt(notes.length);
             System.out.println(notes[randomIndex]);
             try {
-                Thread.sleep(6000);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 System.out.println("Thread interrupted: " + e.getMessage());
             }

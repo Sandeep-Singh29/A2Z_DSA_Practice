@@ -1,6 +1,9 @@
 package com.practice.leetcode.hashmapandhashset.mapproblems;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Author: SANDEEP
@@ -24,25 +27,27 @@ public class Finding2DigitEvenNumber_2094 {
 //        }
         System.out.println(map);
         List<Integer> set = new ArrayList<>();
-        for (int i = 100; i <= 999; i+=2) {
+        for (int i = 100; i <= 999; i += 2) {
             int val = i;
-            int c = val%10 ; val/=10;
-            int b = val%10 ; val/=10;
+            int c = val % 10;
+            val /= 10;
+            int b = val % 10;
+            val /= 10;
             int a = val;
-            if(map.containsKey(a)){
+            if (map.containsKey(a)) {
                 int freA = map.get(a);
-                map.put(a,freA-1);
-                if(freA==1) map.remove(a);
-                if(map.containsKey(b)){
+                map.put(a, freA - 1);
+                if (freA == 1) map.remove(a);
+                if (map.containsKey(b)) {
                     int freB = map.get(b);
-                    map.put(b,freB-1);
-                    if(freB==1) map.remove(b);
-                    if(map.containsKey(c)){
+                    map.put(b, freB - 1);
+                    if (freB == 1) map.remove(b);
+                    if (map.containsKey(c)) {
                         set.add(i);
                     }
-                    map.put(b,freB);
+                    map.put(b, freB);
                 }
-                map.put(a,freA);
+                map.put(a, freA);
             }
         }
 

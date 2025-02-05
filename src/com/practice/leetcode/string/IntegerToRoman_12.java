@@ -1,18 +1,19 @@
 package com.practice.leetcode.string;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class IntegerToRoman_12 {
     public static String intToRoman(int num) {
         List<String> r = Arrays.asList("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I");
         List<Integer> p = Arrays.asList(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1);
-        int i=0;
-        StringBuilder builder  = new StringBuilder();
-        while (num>0){
-            if(num>=p.get(i)){
+        int i = 0;
+        StringBuilder builder = new StringBuilder();
+        while (num > 0) {
+            if (num >= p.get(i)) {
                 builder.append(r.get(i));
                 num = num - p.get(i);
-            }else{
+            } else {
                 i++;
             }
         }

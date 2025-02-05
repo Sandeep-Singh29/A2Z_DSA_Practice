@@ -5,18 +5,7 @@ package com.practice.multithreding.basicThread;
  * Date: 06/01/25
  */
 
-public class ThreadState extends Thread{
-
-    @Override
-    public void run() {
-        System.out.println("RUNNING THREAD");
-        try {
-            Thread.sleep(2000);
-            System.out.println("Work Done After 2000 mSec");
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+public class ThreadState extends Thread {
 
     public static void main(String[] args) throws InterruptedException {
         ThreadState state = new ThreadState();
@@ -29,6 +18,17 @@ public class ThreadState extends Thread{
         state.join();
         System.out.println(state.getState());
 
+    }
+
+    @Override
+    public void run() {
+        System.out.println("RUNNING THREAD");
+        try {
+            Thread.sleep(2000);
+            System.out.println("Work Done After 2000 mSec");
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

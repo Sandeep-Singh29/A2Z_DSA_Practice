@@ -1,22 +1,21 @@
 package com.practice.leetcode.linkedlist.questionleetcode;
 
 
-
 public class DeleteMiddleNode_2095 {
 
     private static Node deleteMiddle(Node head) {  // 1 3 4 7 1 2 6
-        if(head==null || head.next==null){
+        if (head == null || head.next == null) {
             return head.next;
         }
         Node temp = head;
-        int count =0;
-        while(temp!=null){
+        int count = 0;
+        while (temp != null) {
             temp = temp.next;
             count++;
         }
-        int size = (count/2)-1;
+        int size = (count / 2) - 1;
         Node temp1 = head;
-        while(size>0 && temp1!=null){
+        while (size > 0 && temp1 != null) {
             temp1 = temp1.next;
             size--;
         }
@@ -26,20 +25,20 @@ public class DeleteMiddleNode_2095 {
 
 
     public static Node deleteMiddleWay2(Node head) {
-        if(head==null || head.next==null){
+        if (head == null || head.next == null) {
             return head.next;
         }
         Node temp = head;
         int size = 0;
-        while(temp!=null){
+        while (temp != null) {
             size++;
             temp = temp.next;
         }
         Node fast = head;
         Node slow = head;
-        int len = size/2-1;
-        for(int i=0; i<len; i++) {
-            if (i>=0) {
+        int len = size / 2 - 1;
+        for (int i = 0; i < len; i++) {
+            if (i >= 0) {
                 fast = fast.next.next;
                 slow = slow.next;
             }

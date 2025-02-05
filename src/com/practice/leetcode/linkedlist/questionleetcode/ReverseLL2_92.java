@@ -33,12 +33,12 @@ public class ReverseLL2_92 {
         }
         m = reverseL(m.next);
         Node tt = l;
-        while (left > 0 && tt.next!=null){
+        while (left > 0 && tt.next != null) {
             tt = tt.next;
             left--;
         }
-        tt.next =m;
-        while(m.next!=null){
+        tt.next = m;
+        while (m.next != null) {
             m = m.next;
         }
         m.next = r.next;

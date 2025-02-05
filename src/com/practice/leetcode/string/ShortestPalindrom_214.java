@@ -7,7 +7,7 @@ public class ShortestPalindrom_214 {
         int length = s.length();
         String reversedString = new StringBuilder(s).reverse().toString();
         for (int i = 0; i < length; i++) {
-            String orginal =  s.substring(0, length - i);
+            String orginal = s.substring(0, length - i);
             String rev = reversedString.substring(i);
             if (orginal.equals(rev)) {
                 String revStr = reversedString.substring(0, i);

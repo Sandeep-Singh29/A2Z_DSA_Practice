@@ -9,6 +9,14 @@ public class Product {
         this.part2 = builder.part2;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "part1='" + part1 + '\'' +
+                ", part2='" + part2 + '\'' +
+                '}';
+    }
+
     public static class Builder {
         private String part1;
         private String part2;
@@ -26,13 +34,5 @@ public class Product {
         public Product build() {
             return new Product(this);
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "part1='" + part1 + '\'' +
-                ", part2='" + part2 + '\'' +
-                '}';
     }
 }

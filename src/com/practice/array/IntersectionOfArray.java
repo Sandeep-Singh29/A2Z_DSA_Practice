@@ -1,7 +1,6 @@
 package com.practice.array;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class IntersectionOfArray {
@@ -17,14 +16,14 @@ public class IntersectionOfArray {
 
     private static List<Integer> interSectionWay2(int[] arr1, int[] arr2) {
         List<Integer> lit = new ArrayList<>();
-        int i=0;
-        int j=0;
-        while(i<arr1.length && j<arr2.length){
-            if(arr1[i]<arr2[j]){
+        int i = 0;
+        int j = 0;
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] < arr2[j]) {
                 i++;
-            } else if (arr2[j]<arr1[i]) {
+            } else if (arr2[j] < arr1[i]) {
                 j++;
-            }else {
+            } else {
                 lit.add(arr1[i]);
                 i++;
                 j++;
@@ -39,7 +38,7 @@ public class IntersectionOfArray {
         int vis[] = new int[arr2.length];
         for (int i = 0; i < arr1.length; i++) {
             for (int j = 0; j < arr2.length; j++) {
-                if (arr1[i] == arr2[j] && vis[j]==0) {
+                if (arr1[i] == arr2[j] && vis[j] == 0) {
                     list.add(arr2[j]);
                     vis[j] = 1;
                     break;

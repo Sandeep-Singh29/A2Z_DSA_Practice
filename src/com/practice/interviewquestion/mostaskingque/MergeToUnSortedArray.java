@@ -21,9 +21,9 @@ public class MergeToUnSortedArray {
     }
 
     public static void main(String[] args) {
-        int[] a = {3,2,76,3,2,7};
-        int[] b = {8,5,9,6,4,1};
-        int[] result = mergeTwoArrayAndSorted(a,b);
+        int[] a = {3, 2, 76, 3, 2, 7};
+        int[] b = {8, 5, 9, 6, 4, 1};
+        int[] result = mergeTwoArrayAndSorted(a, b);
         System.out.println(Arrays.toString(result));
     }
 

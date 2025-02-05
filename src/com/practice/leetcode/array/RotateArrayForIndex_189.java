@@ -8,6 +8,7 @@ public class RotateArrayForIndex_189 {
         while (l < r)
             swap(nums, l++, r--);
     }
+
     private static void rotate(int[] nums, int k) {
         k %= nums.length;
         reverse(nums, 0, nums.length - 1);
@@ -21,10 +22,11 @@ public class RotateArrayForIndex_189 {
         nums[l] = nums[r];
         nums[r] = temp;
     }
+
     public static void main(String[] args) {
-       int arr [] = {1,2,3,4,5,6};
-       int k =3;
-       rotate(arr,k);
+        int arr[] = {1, 2, 3, 4, 5, 6};
+        int k = 3;
+        rotate(arr, k);
 
     }
 

@@ -19,7 +19,7 @@ public class SingleElementInSortedArray_540 {
     }
 
     public static void main(String[] args) {
-        int nums[] = {1, 1, 2, 2, 3, 3, 4, 4,9, 8, 8};
+        int nums[] = {1, 1, 2, 2, 3, 3, 4, 4, 9, 8, 8};
 //        int i = singleNonDuplicate(nums);
 //        System.out.println(i);
         int i = singleNonDuplicateUsingBS(nums);

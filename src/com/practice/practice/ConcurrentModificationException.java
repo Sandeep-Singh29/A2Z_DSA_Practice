@@ -1,8 +1,6 @@
 package com.practice.practice;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -29,14 +27,14 @@ public class ConcurrentModificationException {
 
 
 //        This Time we have using a ConcurrentHashMap so we have Modify in Runtime
-        ConcurrentHashMap<String,Integer> n = new ConcurrentHashMap<>();
-        n.put("sandeep",26);
-        n.put("kuldeep",21);
-        n.put("rishabh",17);
+        ConcurrentHashMap<String, Integer> n = new ConcurrentHashMap<>();
+        n.put("sandeep", 26);
+        n.put("kuldeep", 21);
+        n.put("rishabh", 17);
         Iterator<String> iterator1 = n.keySet().iterator();
-        while (iterator1.hasNext()){
+        while (iterator1.hasNext()) {
             System.out.println(n.get(iterator1.next()));
-            n.put("vikas",26);
+            n.put("vikas", 26);
         }
 
     }

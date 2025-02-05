@@ -8,8 +8,8 @@ public class PrintNumber {
     }
 
     private static void print(int n) {
-        if(n==10) return;
+        if (n == 10) return;
         System.out.println(n);
-        print(n+1);
+        print(n + 1);
     }
 }

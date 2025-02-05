@@ -21,7 +21,7 @@ public class MaximunSubArraySumWithArray_59 {
             max = Math.max(max, sum);
             if (max >= sum) {
                 listCount = list.stream().mapToInt(Integer::intValue).sum();
-                if (max >= listCount ) {
+                if (max >= listCount) {
                     list.add(arr[i]);
                 }
             }

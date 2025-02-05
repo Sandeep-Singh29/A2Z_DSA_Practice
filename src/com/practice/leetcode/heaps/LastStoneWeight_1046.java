@@ -1,6 +1,9 @@
 package com.practice.leetcode.heaps;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * Author: SANDEEP
@@ -29,22 +32,22 @@ public class LastStoneWeight_1046 {
 
     private static int lastStoneWeightway2Optiomal(int[] stones) {
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
-        for(int e : stones){
+        for (int e : stones) {
             pq.add(e);
         }
-        while(pq.size()>1){
+        while (pq.size() > 1) {
             int x = pq.remove();
             int y = pq.remove();
-            if(x!=y){
-                pq.add(x-y);
+            if (x != y) {
+                pq.add(x - y);
             }
         }
-        if(pq.isEmpty()) return 0;
+        if (pq.isEmpty()) return 0;
         return pq.remove();
     }
 
     public static void main(String[] args) {
-        int[] stones = {2,7,4,1,8,1};
+        int[] stones = {2, 7, 4, 1, 8, 1};
 //        int stoneWeight = lastStoneWeight(stones);
 //        System.out.println(stoneWeight);
         int lasted = lastStoneWeightway2Optiomal(stones);

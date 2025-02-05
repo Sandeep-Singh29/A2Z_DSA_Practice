@@ -38,7 +38,7 @@ public class MinimumSizeSubarraySum_209 {
             }
             j++;
         }
-       return minL == Integer.MAX_VALUE ? 0 : minL;
+        return minL == Integer.MAX_VALUE ? 0 : minL;
     }
 
     public static void main(String[] args) {

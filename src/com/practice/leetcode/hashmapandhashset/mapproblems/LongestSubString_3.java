@@ -21,7 +21,7 @@ public class LongestSubString_3 {
             if (map.containsKey(c) && map.get(c) >= i) { // map.get(c)>=i check kar raha hai i stand kar raha hai start
                 int len = j - i;                           // hamsa get(i)>= i hi rahaga jab map main contains hoga
                 maxLen = Math.max(maxLen, len);
-                while (s.charAt(i) != c){
+                while (s.charAt(i) != c) {
                     i++;
                 }
                 i++;
@@ -35,24 +35,24 @@ public class LongestSubString_3 {
     }
 
     private static int findLargestStrOptimalUsingMap(String str) {
-        int max =0;
-        int start =0;
-        Map<Character,Integer> map = new HashMap<>();
-        for(int end =0;end<str.length();end++){
+        int max = 0;
+        int start = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int end = 0; end < str.length(); end++) {
             char c = str.charAt(end); // get charAt
-            if(map.containsKey(c)){  // map hai ch hai ki nahi ?
-                if(start<=map.get(c)){ // check kar raha hai ki map.get(c) value start sa kam ur= hai mtlb str main match kat rha hai char
-                    start = map.get(c)+1; // to us time start ko hum jo map main char presnt hai uska value+1 main strat kar dega
+            if (map.containsKey(c)) {  // map hai ch hai ki nahi ?
+                if (start <= map.get(c)) { // check kar raha hai ki map.get(c) value start sa kam ur= hai mtlb str main match kat rha hai char
+                    start = map.get(c) + 1; // to us time start ko hum jo map main char presnt hai uska value+1 main strat kar dega
                 }                           // isa hum start aisa postiom main kar dega jaha pa bo value presnt nahi hogi jaha abhi hai
             }
-            map.put(c,end);
-            max = Math.max(max,end-start+1);
+            map.put(c, end);
+            max = Math.max(max, end - start + 1);
         }
-        return max ;
+        return max;
     }
 
     public static void main(String[] args) {
-        String str = "abcabcbb";
+        String str = "sandeep";
         int substring = lengthOfLongestSubstring(str);
         System.out.println(substring);
     }

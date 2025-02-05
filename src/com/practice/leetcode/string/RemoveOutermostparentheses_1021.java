@@ -33,17 +33,17 @@ public class RemoveOutermostparentheses_1021 {
     }
 
     private static String removeOuterParenthesesUsingStack(String s) {
-        StringBuilder stringBuilder= new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         Stack<Character> stack = new Stack<>();
-        for(char c : s.toCharArray()){
-            if(c=='('){
-                if(stack.size()>0){
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                if (stack.size() > 0) {
                     stringBuilder.append(c);
                 }
                 stack.push(c);
-            }else{
+            } else {
                 stack.pop();
-                if (stack.size()>0){
+                if (stack.size() > 0) {
                     stringBuilder.append(c);
                 }
             }

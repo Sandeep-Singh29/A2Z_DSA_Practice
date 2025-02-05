@@ -14,7 +14,7 @@ public class FindMaximunPair_2744 {
         for (String v : words) {
             StringBuilder builder = new StringBuilder(v);
             String rev = builder.reverse().toString();
-            if(!set.contains(rev)){
+            if (!set.contains(rev)) {
                 set.add(v);
             }
         }
@@ -23,7 +23,7 @@ public class FindMaximunPair_2744 {
     }
 
     public static void main(String[] args) {
-        String[] words = {"ab","ba","cc"};  // cd dc ac ca
+        String[] words = {"ab", "ba", "cc"};  // cd dc ac ca
         int stringPairs = maximumNumberOfStringPairs(words);
         System.out.println(stringPairs);
     }

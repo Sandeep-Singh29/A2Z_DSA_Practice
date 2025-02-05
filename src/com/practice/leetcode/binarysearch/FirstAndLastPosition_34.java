@@ -34,23 +34,31 @@ public class FirstAndLastPosition_34 {
         return res;
     }
 
+    public static void main(String[] args) {
+        int arr[] = {5, 7, 7, 8, 8, 10}, target = 8;
+        int[] ints = searchRange(arr, target);
+        System.out.println(Arrays.toString(ints));
+        int[] ints1 = searchRange(arr, target);
+        System.out.println(Arrays.toString(ints1));
+    }
+
     class Solution {
         public int[] searchRange(int[] nums, int target) {
             int first = 0;
             int last = 0;
             boolean firstFlag = true;
             int findArr[] = new int[2];
-            if (nums.length==0) {
+            if (nums.length == 0) {
                 findArr[0] = -1;
                 findArr[1] = -1;
                 return findArr;
             }
             for (int i = 0; i < nums.length; i++) {
-                if (nums[i]==target && firstFlag) {
+                if (nums[i] == target && firstFlag) {
                     first = i;
                     firstFlag = false;
                 }
-                if (nums[i]==target) {
+                if (nums[i] == target) {
                     last = i;
                 }
             }
@@ -64,13 +72,5 @@ public class FirstAndLastPosition_34 {
             // System.out.println(Arrays.toString(findArr));
             return findArr;
         }
-    }
-
-    public static void main(String[] args) {
-        int arr[] = {5, 7, 7, 8, 8, 10}, target = 8;
-        int[] ints = searchRange(arr, target);
-        System.out.println(Arrays.toString(ints));
-        int[] ints1 = searchRange(arr, target);
-        System.out.println(Arrays.toString(ints1));
     }
 }

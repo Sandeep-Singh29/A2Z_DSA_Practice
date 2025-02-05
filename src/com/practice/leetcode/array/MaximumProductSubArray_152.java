@@ -25,7 +25,7 @@ public class MaximumProductSubArray_152 {
     }
 
     public static void main(String[] args) {
-        int arr[] = {-2,0,-1};
+        int arr[] = {-2, 0, -1};
         int sum = maxProduct(arr);
         System.out.println(sum);
     }

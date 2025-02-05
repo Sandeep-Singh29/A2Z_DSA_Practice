@@ -2,7 +2,7 @@ package com.practice.leetcode.array;
 
 public class SetMatrixZero_73 {
     public static void main(String[] args) {
-        int arr[][] = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+        int arr[][] = {{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
         System.out.println("---Before Array---");
         printArr(arr);
         System.out.println("---After Array set 0---");
@@ -17,9 +17,9 @@ public class SetMatrixZero_73 {
         int colCount = arr[0].length;
         int row[] = new int[rowCount];
         int col[] = new int[colCount];
-        for(int i=0;i< arr.length;i++){
-            for(int j=0;j< arr[i].length;j++){
-                if(arr[i][j]==0){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == 0) {
                     col[j] = 1;
                     row[i] = 1;
                 }

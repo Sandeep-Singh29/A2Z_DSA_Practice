@@ -16,11 +16,11 @@ public class AllPalindromInString {
 
     private static String longestPalindrom(List<String> list) {
         int max = 0;
-        String str ="";
-        for(int i=0;i<list.size();i++){
-            if(max<list.get(i).length()){
+        String str = "";
+        for (int i = 0; i < list.size(); i++) {
+            if (max < list.get(i).length()) {
                 str = list.get(i);
-                max = Math.max(max,list.get(i).length());
+                max = Math.max(max, list.get(i).length());
             }
         }
         return str;
@@ -30,9 +30,9 @@ public class AllPalindromInString {
         Set<String> set = new HashSet<>();
         for (int i = 0; i < str.length(); i++) {
             for (int j = i + 1; j < str.length(); j++) {
-                String subtr = str.substring(i,j+1);
+                String subtr = str.substring(i, j + 1);
                 boolean check = checkPali(subtr);
-                if(check){
+                if (check) {
                     set.add(subtr);
                 }
             }

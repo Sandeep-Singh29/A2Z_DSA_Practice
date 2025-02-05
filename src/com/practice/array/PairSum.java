@@ -32,7 +32,7 @@ public class PairSum {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, -3, 3 ,3, -2};
+        int arr[] = {2, -3, 3, 3, -2};
         int sum = 0;
         List<int[]> data = pairSum(arr, sum);
         for (int[] pair : data) {

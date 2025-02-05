@@ -14,7 +14,7 @@ public class LongestSubStrWithVowel_1371 {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == 'a') {
-                vowelCount[0] = (vowelCount[0]^1);  // in xor if v any number appear even time than 0
+                vowelCount[0] = (vowelCount[0] ^ 1);  // in xor if v any number appear even time than 0
 //                vowelCount[0] = (vowelCount[0] + 1) % 2;  // using mode  in mode if all number divided than return 0
             } else if (c == 'e') {
                 vowelCount[1] = (vowelCount[1] + 1) % 2;

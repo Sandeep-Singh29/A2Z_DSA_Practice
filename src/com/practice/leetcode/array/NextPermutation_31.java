@@ -2,7 +2,7 @@ package com.practice.leetcode.array;
 
 public class NextPermutation_31 {
     public static void main(String[] args) {
-        int arr[] = {2,1,3};
+        int arr[] = {2, 1, 3};
 //        int res[] = findPermutation(arr);
         int res2[] = findPermutation2(arr);
 //        System.out.println(Arrays.toString(res));
@@ -13,12 +13,12 @@ public class NextPermutation_31 {
         int gola = -1;
         for (int i = nums.length - 1; i > 0; i--) {
             if (nums[i - 1] < nums[i]) {
-               gola = i - 1;
+                gola = i - 1;
                 break;
             }
         }
         int swapIdx = gola;
-        if(gola!=-1) {
+        if (gola != -1) {
             for (int j = nums.length - 1; j > 0; j--) {
                 if (nums[j] > nums[gola]) {
                     swapIdx = j;
@@ -29,7 +29,7 @@ public class NextPermutation_31 {
                 }
             }
         }
-        swap(nums,gola+1,nums.length-1);
+        swap(nums, gola + 1, nums.length - 1);
         return nums;
     }
 

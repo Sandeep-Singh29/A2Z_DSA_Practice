@@ -15,8 +15,8 @@ public class SumOfDiagnals {
                 if (i == j) {
                     sum += arr[i][j];
                 }
-                if(i+j==r){
-                    rightDiagonal+=arr[i][j];
+                if (i + j == r) {
+                    rightDiagonal += arr[i][j];
                 }
             }
         }

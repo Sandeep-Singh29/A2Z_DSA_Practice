@@ -1,15 +1,6 @@
 package com.practice.leetcode.linkedlist.initilization;
 
 public class IterateUsingRecursion {
-    static class Node {
-        Node next;
-        int val;
-
-        Node(int val) {
-            this.val = val;
-        }
-    }
-
     public static void main(String[] args) {
         Node head = new Node(10);
         Node a = new Node(20);
@@ -32,5 +23,14 @@ public class IterateUsingRecursion {
         System.out.print(head.val + " ");
         iterateUsingRecusion(head.next);
 
+    }
+
+    static class Node {
+        Node next;
+        int val;
+
+        Node(int val) {
+            this.val = val;
+        }
     }
 }

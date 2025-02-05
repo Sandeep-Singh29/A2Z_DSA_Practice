@@ -1,8 +1,7 @@
 package com.practice.interviewquestion.streamapi;
 
-import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FindDataForListDifferntType {
 
@@ -63,7 +62,7 @@ public class FindDataForListDifferntType {
 
 // Get the names of all employees who have joined after 2015?    [8]
 
-         //List<Employee> afterJoin2015 = employeeList.stream().filter(e -> e.getYearOfJoining() > 2015).collect(Collectors.toList());
+        //List<Employee> afterJoin2015 = employeeList.stream().filter(e -> e.getYearOfJoining() > 2015).collect(Collectors.toList());
         //System.out.println(afterJoin2015);  all Employee Get
         // afterJoin2015.forEach(System.out::println);
         //afterJoin2015.stream().map(Employee::getName).forEach(System.out::println);
@@ -85,7 +84,7 @@ public class FindDataForListDifferntType {
         //Map<String, Double> averagesalary = employeeList.stream()
         //        .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
         //averagesalary.entrySet().forEach(e->{
-          //  System.out.println(e.getKey()+" : "+e.getValue()); });
+        //  System.out.println(e.getKey()+" : "+e.getValue()); });
         //System.out.println(averagesalary);
 
 //   Get the details of youngest male employee in the product development department?  [11]
@@ -104,7 +103,6 @@ public class FindDataForListDifferntType {
 
         //Employee mostExperience = employeeList.stream().sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst().get();
         //System.out.println(mostExperience);
-
 
 
 //   How many male and female employees are there in the sales and marketing team?   [13]
@@ -158,7 +156,7 @@ public class FindDataForListDifferntType {
         greaterThan25.forEach(System.out::println);
         */
 
-       // Sorting by Multiple variable
+        // Sorting by Multiple variable
         /*
         employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)
                 .thenComparing(Employee::getAge)

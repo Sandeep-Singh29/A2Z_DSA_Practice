@@ -1,8 +1,5 @@
 package com.practice.other;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
 public class Test {
 
     public static void main(String[] args) {
@@ -15,19 +12,19 @@ public class Test {
 
     private static int sortByDesending(int[] s) {
         int largest = 0;
-        int second =-1;
-        for(int i=0;i<s.length;i++){
-            if (s[i]>largest){
+        int second = -1;
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] > largest) {
                 second = largest;
                 largest = s[i];
             }
-            if(s[i]>second && s[i]!=largest){
+            if (s[i] > second && s[i] != largest) {
                 second = s[i];
             }
         }
 
 
-        System.out.println("largest : "+largest +" : "+second);
+        System.out.println("largest : " + largest + " : " + second);
         return largest;
     }
 }

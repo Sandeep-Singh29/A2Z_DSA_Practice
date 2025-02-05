@@ -2,7 +2,7 @@ package com.practice.gfg.string;
 
 public class CountNumberOfSubString {
     public static long substrCount(String S) {
-    return 0l;
+        return 0l;
     }
 
     public static void main(String[] args) {

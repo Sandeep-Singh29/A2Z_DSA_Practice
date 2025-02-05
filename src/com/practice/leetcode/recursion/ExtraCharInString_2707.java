@@ -15,9 +15,9 @@ public class ExtraCharInString_2707 {
     }
 
     private static String replaceStr(String ans, List<String> list) {
-        for(int i=0; i< list.size();i++){
+        for (int i = 0; i < list.size(); i++) {
             String string = list.get(i);
-            ans = ans.replaceAll(string,"");
+            ans = ans.replaceAll(string, "");
         }
         return ans;
     }

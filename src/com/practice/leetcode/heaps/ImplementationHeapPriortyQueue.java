@@ -1,9 +1,6 @@
 package com.practice.leetcode.heaps;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Author: SANDEEP
@@ -88,13 +85,13 @@ class MinHeap {
         if (rightChild < size && arr[rightChild] < arr[minIdx]) minIdx = rightChild;
         if (parentIdx == minIdx) return;
         swap(parentIdx, minIdx); // swap
-        downHeapify(minIdx); 
+        downHeapify(minIdx);
     }
 
     public int[] sort(MinHeap heap) {
         int len = size;
-        int []arr = new int[size];
-        for(int i=0;i<len;i++){
+        int[] arr = new int[size];
+        for (int i = 0; i < len; i++) {
             int val = heap.remove();
             arr[i] = val;
         }

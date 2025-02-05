@@ -11,7 +11,7 @@ public class FindMinimumInSortedArray_153 {
     }
 
     public static void main(String[] args) {
-        int arr[] = {11,13,15,17};
+        int arr[] = {11, 13, 15, 17};
         int min = findMin(arr);
         System.out.println(min);
         int minBinary = findMinUsingBinary(arr);

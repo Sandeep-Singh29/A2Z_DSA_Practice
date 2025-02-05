@@ -20,7 +20,7 @@ public class StringPattern {
         char[] charArray = pattern.toCharArray();
         for (int i = 0; i < animalStr.length; i++) {
             String string = map.get(charArray[i]);
-            if(!string.equals(animalStr[i])){
+            if (!string.equals(animalStr[i])) {
                 return false;
             }
         }

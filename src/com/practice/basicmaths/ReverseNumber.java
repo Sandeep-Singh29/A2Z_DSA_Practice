@@ -17,10 +17,10 @@ public class ReverseNumber {
     }
 
     public static int reverseUsingNoConversion(int num) {
-        int rev =0;
+        int rev = 0;
         while (num > 0) {
             int last = num % 10;
-            rev = (rev*10)+last;
+            rev = (rev * 10) + last;
             num = num / 10;
         }
         return rev;

@@ -14,7 +14,7 @@ public class InterchageTheDiagnonalOfArray {
         System.out.println("Previous Without Swap");
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
-                System.out.print(arr[i][j]+"\t");
+                System.out.print(arr[i][j] + "\t");
             }
             System.out.println();
         }
@@ -29,7 +29,7 @@ public class InterchageTheDiagnonalOfArray {
 
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
-                System.out.print(arr[i][j]+"\t");
+                System.out.print(arr[i][j] + "\t");
             }
             System.out.println();
         }

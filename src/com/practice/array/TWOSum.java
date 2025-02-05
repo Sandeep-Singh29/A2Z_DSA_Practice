@@ -1,6 +1,8 @@
 package com.practice.array;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
 public class TWOSum {
 
@@ -18,7 +20,7 @@ public class TWOSum {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,7,11,15));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 7, 11, 15));
         int target = 13;
         int n = list.size();
         ArrayList<Pair<Integer, Integer>> data = twoSum(list, target, n);

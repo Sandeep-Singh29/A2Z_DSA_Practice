@@ -11,15 +11,15 @@ public class AddTwoNumber_415 {
         int i = num1.length() - 1;
         int j = num2.length() - 1;
         int carry = 0;
-        String ans ="";
+        String ans = "";
         while (i >= 0 || j >= 0 || carry != 0) {
             int vali = i >= 0 ? num1.charAt(i) - '0' : 0;
             int valj = j >= 0 ? num2.charAt(j) - '0' : 0;
             i--;
             j--;
-            int sum = vali+valj+carry;
-            ans = (sum %10)+ans;
-            carry = sum/10;
+            int sum = vali + valj + carry;
+            ans = (sum % 10) + ans;
+            carry = sum / 10;
         }
         return ans;
     }

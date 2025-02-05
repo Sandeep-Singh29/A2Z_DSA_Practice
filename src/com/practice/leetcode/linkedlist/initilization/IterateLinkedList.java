@@ -1,15 +1,6 @@
 package com.practice.leetcode.linkedlist.initilization;
 
 public class IterateLinkedList {
-    static class Node {
-        Node next;
-        int val;
-
-        Node(int val) {
-            this.val = val;
-        }
-    }
-
     public static void main(String[] args) {
         Node head = new Node(10);
         Node a = new Node(20);
@@ -31,5 +22,14 @@ public class IterateLinkedList {
             temp = temp.next;
         }
         System.out.print("null");
+    }
+
+    static class Node {
+        Node next;
+        int val;
+
+        Node(int val) {
+            this.val = val;
+        }
     }
 }

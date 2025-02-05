@@ -1,6 +1,7 @@
 package com.practice.leetcode.array;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.TreeMap;
 
 public class SortColour_75 {
 
@@ -48,13 +49,13 @@ public class SortColour_75 {
         int high = nums.length - 1;   //  0, 0, 2, 1, 1, 2
         while (mid <= high) {
             if (nums[mid] == 0) {
-                swap(low,mid,nums);
+                swap(low, mid, nums);
                 mid++;
                 low++;
             } else if (nums[mid] == 1) {
                 mid++;
             } else {
-                swap(mid, high,nums);
+                swap(mid, high, nums);
                 high--;
             }
         }

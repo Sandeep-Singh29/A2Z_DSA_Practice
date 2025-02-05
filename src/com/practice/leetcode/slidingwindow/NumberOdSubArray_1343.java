@@ -31,14 +31,14 @@ public class NumberOdSubArray_1343 {
         for (int c = 0; c < k; c++) {
             sum += arr[c];
         }
-        if(sum/k>=threshold){
+        if (sum / k >= threshold) {
             count++;
         }
         i++;
         j++;
         while (j < n) {
             sum = sum - arr[i - 1] + arr[j]; //  Main formula -i element and add+ j element
-            if(sum/k>=threshold){
+            if (sum / k >= threshold) {
                 count++;
             }
             i++;

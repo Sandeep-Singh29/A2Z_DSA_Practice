@@ -1,7 +1,5 @@
 package com.practice.leetcode.string;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -15,13 +13,13 @@ public class LongestHappyString_1405 {
     private static String longestDiverseString(int a, int b, int c) {
         Queue<int[]> pq = new PriorityQueue<>((x, y) -> y[1] - x[1]);
         if (a > 0) {
-            pq.offer(new int[] {'a', a});
+            pq.offer(new int[]{'a', a});
         }
         if (b > 0) {
-            pq.offer(new int[] {'b', b});
+            pq.offer(new int[]{'b', b});
         }
         if (c > 0) {
-            pq.offer(new int[] {'c', c});
+            pq.offer(new int[]{'c', c});
         }
 
         StringBuilder sb = new StringBuilder();

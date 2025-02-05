@@ -1,7 +1,8 @@
 package com.practice.array;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CommonNumber {
     public static void main(String[] args) {

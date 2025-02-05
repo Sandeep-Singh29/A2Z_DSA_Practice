@@ -7,10 +7,10 @@ public class LinkedListCycle_141 {
     private static boolean hasCycle(Node head) {
         Node fast = head;
         Node slow = head;
-        while(fast!=null && fast.next!=null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if(slow==fast){
+            if (slow == fast) {
                 return true;
             }
         }
@@ -34,14 +34,14 @@ public class LinkedListCycle_141 {
     }
 
     private static boolean hasCycleUsingHash(Node head) {
-            HashSet<Node> visited = new HashSet<>();
-            Node current = head;
-            while (current != null) {
-                if (visited.contains(current)) return true;
-                visited.add(current);
-                current = current.next;
-            }
-            return false;
+        HashSet<Node> visited = new HashSet<>();
+        Node current = head;
+        while (current != null) {
+            if (visited.contains(current)) return true;
+            visited.add(current);
+            current = current.next;
         }
+        return false;
     }
+}
 

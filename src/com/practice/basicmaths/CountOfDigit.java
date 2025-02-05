@@ -19,7 +19,7 @@ public class CountOfDigit {
         int c = usingString(num);
         System.out.println("Using String : " + c);
         int usingMathLog = usingMathLog(num);
-        System.out.println("usingMathLog : "+usingMathLog);
+        System.out.println("usingMathLog : " + usingMathLog);
     }
 
     public static int usingString(int num) {
@@ -29,7 +29,7 @@ public class CountOfDigit {
 
     public static int usingMathLog(int n) {
         if (n == 0) return 1;
-        return (int)(Math.log10(n) + 1);
+        return (int) (Math.log10(n) + 1);
     }
 
 }

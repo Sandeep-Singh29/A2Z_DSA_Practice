@@ -1,8 +1,6 @@
 package com.practice.other;
 
-import java.util.Arrays;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -51,19 +49,19 @@ public class FirstNonRepeatedChar {
 
 
     public static void main(String[] args) {
-          String d = "abcbda";
+        String d = "abcbda";
 //        Character c = nonRepeat(d);
 //        System.out.println(c);
 //        Character cc = usingStringSort(d);
 //        System.out.println(cc);
         Character ccc = usingJavaStream(d);
-        System.out.println("Using Stream :  "+ ccc);
+        System.out.println("Using Stream :  " + ccc);
     }
 
     private static Character usingJavaStream(String d) {
         Map<Character, Long> charCountMap = d.chars()
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
-        return charCountMap.entrySet().stream().filter(m-> m.getValue()==1).map(Map.Entry::getKey).findFirst().orElse(null);
+        return charCountMap.entrySet().stream().filter(m -> m.getValue() == 1).map(Map.Entry::getKey).findFirst().orElse(null);
     }
 }

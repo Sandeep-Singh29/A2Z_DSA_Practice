@@ -13,15 +13,15 @@ public class MajorityElement_169 {
     }
 
     private static int mooreVotingAlgo(int[] nums) {
-        int ele=0;
+        int ele = 0;
         int count = 0;
         for (int v : nums) {
-            if(count==0){
+            if (count == 0) {
                 ele = v;
                 count++;
-            } else if (ele!=v) {
+            } else if (ele != v) {
                 count--;
-            }else {
+            } else {
                 count++;
             }
         }

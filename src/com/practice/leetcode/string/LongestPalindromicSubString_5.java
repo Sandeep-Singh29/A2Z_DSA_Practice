@@ -1,9 +1,5 @@
 package com.practice.leetcode.string;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 public class LongestPalindromicSubString_5 {
 
     public static void main(String[] args) {

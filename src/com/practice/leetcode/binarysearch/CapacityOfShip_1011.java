@@ -68,7 +68,7 @@ public class CapacityOfShip_1011 {
     }
 
     public static void main(String[] args) {
-        int arr[] = {3,2,2,4,1,4}, days = 3;
+        int arr[] = {3, 2, 2, 4, 1, 4}, days = 3;
         int shipped = shipWithinDays(arr, days);
         System.out.println(shipped);
         int leastWeightCapacity = leastWeightCapacityBrute(arr, days);

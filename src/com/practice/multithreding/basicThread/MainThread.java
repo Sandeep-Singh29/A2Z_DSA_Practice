@@ -8,6 +8,6 @@ package com.practice.multithreding.basicThread;
 public class MainThread {
     public static void main(String[] args) {
         System.out.println("Hello World.");
-        System.out.println("Thread Name to Run Hello World ::>>  " +Thread.currentThread().getName());
+        System.out.println("Thread Name to Run Hello World ::>>  " + Thread.currentThread().getName());
     }
 }

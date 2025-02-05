@@ -1,8 +1,5 @@
 package com.practice.leetcode.heaps;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 /**
  * Author: SANDEEP
  * Date: 08-10-2024

@@ -1,9 +1,5 @@
 package com.practice.leetcode.linkedlist.initilization;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Arrays;
-
 class Node {
     int val;
     Node next;
@@ -18,6 +14,27 @@ public class ImplementLinkedList {
     Node head;
     Node tail;
     int size;
+
+    public static void main(String[] args) {
+        ImplementLinkedList list = new ImplementLinkedList();
+        list.insertAtTail(10);
+        list.insertAtTail(12);
+        list.insertAtTail(40);
+        list.size();
+        list.insertAtHead(1);
+        list.display();
+        list.size();
+        list.set(2, 30);
+        list.display();
+        list.size();
+        System.out.println("Get Element By index 2 :  " + list.get(2));
+        list.delete(4);
+        list.display();
+
+        int a = 4;
+        int b = (int) 7 / 2;
+        System.out.println(b);
+    }
 
     public void insertAtTail(int i) {
         Node node = new Node(i);
@@ -57,15 +74,15 @@ public class ImplementLinkedList {
     }
 
     private void set(int idx, int data) {
-        if(idx==0){
+        if (idx == 0) {
             insertAtHead(data);
             return;
         }
-        if(idx==size){
+        if (idx == size) {
             insertAtTail(data);
             return;
         }
-        if(idx>size){
+        if (idx > size) {
             System.out.println("Invalid Index..!!  ");
             return;
         }
@@ -85,7 +102,7 @@ public class ImplementLinkedList {
                 idx--;
                 temp = temp.next;
             }*/
-            for(int i=0;i<idx-1;i++){
+            for (int i = 0; i < idx - 1; i++) {
                 temp = temp.next;
             }
             newNode.next = temp.next;
@@ -96,7 +113,7 @@ public class ImplementLinkedList {
 
     private int get(int idx) {
         Node temp = head;
-        while(idx>0 && temp!=null){
+        while (idx > 0 && temp != null) {
             temp = temp.next;
             idx--;
         }
@@ -105,44 +122,21 @@ public class ImplementLinkedList {
     }
 
     private void delete(int idx) {  // 1-> 10-> 30-> 12-> 40-> null
-        if(idx>size-1 || idx<0){
+        if (idx > size - 1 || idx < 0) {
             System.out.println("Invalid Index");
             return;
         }
         Node node = head;
-        if(idx==0){
+        if (idx == 0) {
             head = head.next;
             return;
         }
-        for(int i=0; i<idx-1;i++){
+        for (int i = 0; i < idx - 1; i++) {
             node = node.next;
         }
         node.next = node.next.next;
         size--;
     }
-
-    public static void main(String[] args) {
-        ImplementLinkedList list = new ImplementLinkedList();
-        list.insertAtTail(10);
-        list.insertAtTail(12);
-        list.insertAtTail(40);
-        list.size();
-        list.insertAtHead(1);
-        list.display();
-        list.size();
-        list.set(2,30);
-        list.display();
-        list.size();
-        System.out.println("Get Element By index 2 :  "+list.get(2));
-        list.delete(4);
-        list.display();
-
-        int a = 4;
-        int b = (int)7/2;
-        System.out.println(b);
-    }
-
-
 
 
 }

@@ -22,7 +22,7 @@ public class KthLargestElement_215 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {3,2,3,1,2,4,5,5,6};
+        int[] nums = {1,2,3,4,5,6,7,8};
         int k = 4;
         int kthLargest = findKthLargest(nums, k);
         System.out.println(kthLargest);

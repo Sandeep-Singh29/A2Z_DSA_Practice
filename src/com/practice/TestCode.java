@@ -1,19 +1,22 @@
 package com.practice;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-class Student{
+class Student {
     String name;
     String address;
     String department;
 
-    Student( String name, String address,String department){
-        this.name=name;
-        this.address=address;
-        this.department=department;
-        }
+    Student(String name, String address, String department) {
+        this.name = name;
+        this.address = address;
+        this.department = department;
+    }
 
     public String getName() {
         return name;
@@ -41,10 +44,10 @@ class Student{
 class TestCode {
     public static void main(String[] args) {
         List<Student> list = new ArrayList<>();
-        list.add(new Student("sandeep","kanpur","hr"));
-        list.add(new Student("aman","delhi","hr"));
-        list.add(new Student("rohit","delhi","developer"));
-        list.add(new Student("vivek","bihar","testing"));
+        list.add(new Student("sandeep", "kanpur", "hr"));
+        list.add(new Student("aman", "delhi", "hr"));
+        list.add(new Student("rohit", "delhi", "developer"));
+        list.add(new Student("vivek", "bihar", "testing"));
 
 
 //        Map<String, Student> collect = list.stream().collect(Collectors.toMap(Student::getName, student -> student));
@@ -59,8 +62,8 @@ class TestCode {
 
         Map<String, Long> collect = Arrays.stream(name.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         StringBuilder builder = new StringBuilder();
-        for(Map.Entry<String,Long> m : collect.entrySet()){
-                builder.append(m.getKey());
+        for (Map.Entry<String, Long> m : collect.entrySet()) {
+            builder.append(m.getKey());
         }
         System.out.println(builder);
     }

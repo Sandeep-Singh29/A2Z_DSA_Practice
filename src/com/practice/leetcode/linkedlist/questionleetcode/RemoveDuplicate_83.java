@@ -10,11 +10,11 @@ public class RemoveDuplicate_83 {
 
     private static Node deleteDuplicates(Node head) {  // 1 1
         Node temp = head;
-        while(temp!=null && temp.next!=null){
+        while (temp != null && temp.next != null) {
             int second = temp.next.val;
-            if(temp.val==second){
+            if (temp.val == second) {
                 temp.next = temp.next.next;
-            }else{
+            } else {
                 temp = temp.next;
             }
         }

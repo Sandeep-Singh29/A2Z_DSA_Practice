@@ -12,9 +12,9 @@ public class Anagram {
         Arrays.sort(charArray1);
         String s1 = String.valueOf(charArray);
         String s2 = String.valueOf(charArray1);
-        if(s1.equals(s2)){
+        if (s1.equals(s2)) {
             System.out.println("String are Anagram");
-        }else{
+        } else {
             System.out.println("Not Anagram");
         }
     }
