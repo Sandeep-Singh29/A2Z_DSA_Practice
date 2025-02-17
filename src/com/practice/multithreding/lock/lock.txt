@@ -1,0 +1,62 @@
+Lock :: Jab multiple Thread ek share resource main kaam karaga ab hum synchronized ka use karaga
+        to isi ko Lock bolta hai. Mean Lock Lagana ka share resource ko single time main single hi thread access karaga.\
+
+
+TYPES OF LOCK :
+
+1. Intrinsic :  Java Ka har ek Object main build in Intrinsic(Monitor lock) Lock hota hai.
+                Hum Object lock ka use synchronized keyword sa karta hai bina
+                synchronized keyword sa hum achieve nahi kar sakta hai.
+
+2. Explicit :  They are also called as manual lock(ReentrantLock(java.util.concurrent.locks)).
+                yeah ek advance Lock System hai Iski lagana ka liya
+                hama java.util.concurrent.locks interface ka use karna hota hai.
+                yaha ham manual bata sakata hai kab lock karna hai kab unlock karna hai.
+
+
+LOCK METHOD :
+
+1. tryLock() :
+                Suppose 2 Thread T1 and T2.
+                Maan leta hai t1 ka pass Lock hai. Aur t2 ab execute kar raha hai
+                to iss time time lock.tryLock() FALSE return karaga aur if block chalaga nahi.
+
+                tryLock() method check karta hai ki lock available hai ya nahi.
+                Agar lock available hai, toh thread resource access karega.
+                Agar lock available nahi hai, toh thread bina wait kiye aage badh jayega.
+                Ye synchronized ka alternative hai jo wait nahi karwata, balki fail hone par turant return kar deta hai.
+
+
+2. tryLock(int time , TimeUnits units) :
+                    tryLock(int time, TimeUnit unit) method Lock interface ka ek method hai jo ek specified
+                    time tak wait karta hai agar lock available nahi hai. Agar lock mil jaye toh true return karega,
+                    warna false.
+
+                    time → Kitni der tak wait kare.
+                    unit → Time unit specify karne ke liye (SECONDS, MILLISECONDS, NANOSECONDS, etc.).
+                    Agar given time tak lock nahi mila toh false return karega.
+                    Agar lock mil gaya toh true return karega.
+
+
+3. lock() : lock() method same  synchronized keyword and synchronized Block jaisa kaam karta hai
+            Jab takl single thread apna kaam complte nahi kar deta tab tak dusra thread interfair(beech main)
+            nahi karaga.
+
+
+ReentrantLock ::
+
+-Lock tab hi unlock hota hai jab Lock Match ho jaya unLock sa (Same as key aur Lock) ek Key sa ek hi Lock Khulaga .
+-Ek thread multiple time lock kar sakata hai.
+
+
+
+ReentrantReadWriteLock :: Crete ReadWrite Lock
+
+    private final ReadWriteLock lock = new ReentrantReadWriteLock();
+    private final Lock readLock = lock.readLock();
+    private final Lock writeLock = lock.writeLock();
+
+ReadLock :: readLock main multiple thread ek time main access(acquire) kar sakta hai.
+            but same time main check karaga ki koi bhi thread writeLock main acquire na ho .
+
+writeLock ::

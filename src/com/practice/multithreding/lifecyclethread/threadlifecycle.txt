@@ -1,0 +1,12 @@
+LIFE CYCLE OF THREAD ::
+
+NEW : A thread is in the state when it is created but not yet started.
+Ex: MyThread thread =  new MyThread(); // This is called as NEW State.
+
+RUNNABLE : After the start method is called ,the thread become runnable. It's ready to run and is waiting for CPU time.
+
+RUNNING : The thread is in the state when it is executing.
+
+BLOCKING/WAITING : A thread is in the state when it is waiting for a resource or for another thread to perform an action.
+
+TERMINATED : A thread is in the state when it has finished executing.

@@ -1,0 +1,11 @@
+THREAD : Implementation using extends a Thread class and @Override a run().
+WHEN WE USED :
+
+RUNNABLE : Implement a Runnable Interface and @Override a run().
+WHEN WE USED : When A class extends B then we have not use thread
+                BCZ only one class is extend in One time
+                So we have implements a Runnable Interface.
+
+** Good practice is Always Implement a Runnable interface bcz if we implement a
+    Runnable class we also extends a other class.
+    So there are 2 use cases and more help.

@@ -1,0 +1,15 @@
+THREAD COMMUNICATION :  In a Multithreaded environment thread often need to communicate and
+                        coordinate with each other to accomplish a task.
+
+- Without proper communication mechanism , threads might end  up in inefficient busy-waiting
+    states, leading to wastage of CPU resources and potential deadlocks.
+
+
+FOR COMMUNICATION A THREADS USED THIS METHOD:
+
+wait()
+notify()
+notifyAll()
+
+
+PROBLEM WITHOUT THREADS COMMUNICATION  ::

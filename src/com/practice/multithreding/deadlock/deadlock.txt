@@ -1,0 +1,19 @@
+DEADLOCK MEANS :: Both thread are dependent to each other
+
+Ex :
+ Thread 1 has Paper.
+ Thread 2 has Pen.
+
+Thread 1 tab tak process nhi karaga jab tak use PEN na mil jaya.
+Thread 2 tab tak process nhi karaga jab tak use PAPER na mil jaya.
+
+To is case main agar kisi ko kuch nahi milagag to ya wait state min rahage Aur isi ko DEADLOCK bolta hai.
+
+
+DEADLOCK Typically Occurs when four conditions are meet simultaneously.
+
+1. Mutual Exclusion : Only one thread can access resource at a time.
+2. Hold And Wait : A thread holding at least one resource is waiting to acquire additional resources held by other thread.
+3. No Preemption : Resources cannot be forcibly taken from a thread holding them.
+4. Circular Wait : A set of threads is waiting for each other in a circular chain.
+

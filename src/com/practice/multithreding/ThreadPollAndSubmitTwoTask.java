@@ -35,8 +35,8 @@ public class ThreadPollAndSubmitTwoTask {
 
         executor.submit(task1);
         executor.submit(task2);
-        boolean shutdown = executor.isShutdown();
-        System.out.println(shutdown);
+        executor.isShutdown();
+
 
     }
 

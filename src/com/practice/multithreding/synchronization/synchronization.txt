@@ -1,0 +1,17 @@
+Synchronization Without:
+Jab Multiple Thread ho Aur sabhi thread single data ko process kar raha ho to
+kisi time same thread same time main ek hi data ko process karaga jisma hum logo ko data
+loss and data latency main issue hoga.
+
+Synchronization Without : Jaha hama log raha mujhe data main safe operation chaiya
+Jaisa same time main multiple thread operation nahi kar sakti.
+Aur apki need ho single time single thread process ho
+to Us time Synchronization keyword ka use karaga iss hum yeah strict kar deta hai
+Ek time main ek hi thread process hogi jab tak current thread apna kaam done nahi kar deti.
+
+
+RACE CONDITION ::
+Jab multiple thread ek share resource main same time  kaam kara raha ho to uss Case main
+Race Condition hoti hai.
+
+How to Prevent(Bachana) a RACE CONDITION :: Using Synchronized keyword or Synchronized block.
