@@ -13,7 +13,8 @@ import java.util.stream.Collectors;
 public class SortMapByKeyAndValue {
     public static void main(String[] args) {
 
-        Map<String, Integer> phones = Map.of("iphone15", 70, "samsung", 100, "moto", 20, "oneplus", 30, "nothing", 40, "googlepixel", 50);
+        Map<String, Integer> phones = Map.of("iphone15", 70, "samsung",
+                100, "moto", 20, "oneplus", 30, "nothing", 40, "googlepixel", 50);
         System.out.println("Iterate Map");
         phones.entrySet().forEach(System.out::println);
 
@@ -29,7 +30,5 @@ public class SortMapByKeyAndValue {
         LinkedHashMap<String, Integer> sortByValue = phones.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(
                 Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         System.out.println(sortByValue);
-
-
     }
 }

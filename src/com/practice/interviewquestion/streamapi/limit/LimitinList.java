@@ -14,8 +14,8 @@ public class LimitinList {
         List<Integer> list = integers.stream().limit(1).toList();
         System.out.println(list);
 
-        // Using limit we have find the largest elemnt
-        List<Integer> list1 = integers.stream().distinct().sorted(Comparator.reverseOrder()).skip(2).limit(1).toList();
+        // Using limit we have find the 2 largest elemnt
+        List<Integer> list1 = integers.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).limit(1).toList();
         System.out.println(list1);
         // Other way
         Integer i = integers.stream().distinct().sorted(Comparator.reverseOrder()).skip(2).findFirst().get();

@@ -1,0 +1,26 @@
+1. Sealed Classes
+Sealed classes allow karti hain ki hum control kar sakein ki kaun si classes ya interfaces inherit kar sakti hain.
+
+USE CASE ::
+Jab hume inheritance ko restrict karna ho.
+Security aur maintainability improve karne ke liye.
+
+
+
+2. Pattern Matching for Switch (Switch ke liye Pattern Matching)
+
+Switch statement ko aur powerful banane ke liye pattern matching ka support diya gaya hai.
+
+USE CASE ::
+Code readability aur simplicity badhti hai.
+Null handling aur type safety improve hoti hai.
+
+
+3. New Pseudo-Random Number Generator (Naya Random Number Generator API)
+
+Naya API diya gaya hai jo random number generation ko aur flexible aur better banata hai.
+
+USE CASE ::
+Cryptography aur gaming applications mein better random number generation.
+
+

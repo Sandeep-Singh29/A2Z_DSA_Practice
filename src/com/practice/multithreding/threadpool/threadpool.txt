@@ -1,0 +1,38 @@
+THREAD POOL ::
+
+Thread Pooling Multithreading ka ek concept hai jisme pre-created threads ka ek pool maintain kiya jata hai.
+Jab ek task aata hai, toh naye thread banane ke bajaye existing thread pool se thread assign kiya jata hai.
+Ye approach performance improve karta hai aur resource management ko optimize karta hai.
+
+Example ::
+
+-Meri shop hai pizza ki aur yaha client ata hai.
+-1st day 2 cleint aya to manina dono ko handle kar diya
+-2nd day main 5 cleint aya ab main 5 client ko ek sath handle nahi kar sakta
+to maina ek helper rakh liya .
+to maina aur helper na milkar client handle kar liya.
+- ab ana bala dino main bhut sa client ho jayaga to main aur mera 1 helper kaisa handle karaga.
+
+-- tabhi ata hai Thread pool.
+Thread pool main multiple thread  pehla sa hi create rahaga Pool main.
+Jab bhi kisi ki jarurt hogi bo work karna lagaga.
+
+-- Ab maina apna shop par 5 helper rakgh liya.
+jisa cleint ayaga usi ka hisab sa mera helper kaam karaga nahi to wait karaga apna turn ana ka.
+
+
+WHY WE USE THREAD POOL ::
+
+-Resource Management.
+-Response time.
+-Control over Thread Count.
+
+Thread creation costly hota hai (time & memory lagta hai)
+Zyada threads system slowdown kar sakti hain (CPU overhead badhta hai)
+Thread reuse se performance improve hoti hai (efficient resource utilization)
+
+
+
+
+
+

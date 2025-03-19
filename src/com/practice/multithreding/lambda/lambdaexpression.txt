@@ -1,0 +1,8 @@
+LAMBDA EXPRESSION :
+
+Lambda expression ek way hai code ko likhna ka jisa code concise and readable lagat hai kab line sa
+-- lamda ek Anonymous class hai
+-- Aur ya hamasa FunctionalInterface ka Sath hi perform kar sakta hai
+-- Jisma hum remove karat hai Modifier, Return type  and method name
+-- isko perform karna ka liya ()->  ya symbol use karta hai
+-- () ka anadar hum paramter pass kar sakta hai

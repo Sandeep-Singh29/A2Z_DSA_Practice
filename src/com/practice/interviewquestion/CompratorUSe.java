@@ -43,7 +43,11 @@ public class CompratorUSe {
         treeMap.putAll(map);
         System.out.println(treeMap);
 
-        LinkedHashMap<Integer, Integer> collect = treeMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(
+        LinkedHashMap<Integer, Integer> collect = treeMap
+                .entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(
                 Map.Entry::getKey, Map.Entry::getValue,
                 (k, v) -> k,
                 LinkedHashMap::new

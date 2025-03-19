@@ -1,0 +1,7 @@
+1️⃣ Lambda Expressions (→)
+2️⃣ Functional Interfaces & Default Methods
+3️⃣ Stream API
+4️⃣ Method References (::)
+5️⃣ Optional Class
+6️⃣ New Date & Time API
+7️⃣ Base64 Encoding and Decoding

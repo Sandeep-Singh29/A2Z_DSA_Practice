@@ -1,0 +1,76 @@
+THREAD POOL ::
+
+Thread Pooling Multithreading ka ek concept hai jisme pre-created threads ka ek pool maintain kiya jata hai.
+Jab ek task aata hai, toh naye thread banane ke bajaye existing thread pool se thread assign kiya jata hai.
+Ye approach performance improve karta hai aur resource management ko optimize karta hai.
+
+Example ::
+
+-Meri shop hai pizza ki aur yaha client ata hai.
+-1st day 2 cleint aya to manina dono ko handle kar diya
+-2nd day main 5 cleint aya ab main 5 client ko ek sath handle nahi kar sakta
+to maina ek helper rakh liya .
+to maina aur helper na milkar client handle kar liya.
+- ab ana bala dino main bhut sa client ho jayaga to main aur mera 1 helper kaisa handle karaga.
+
+-- tabhi ata hai Thread pool.
+Thread pool main multiple thread  pehla sa hi create rahaga Pool main.
+Jab bhi kisi ki jarurt hogi bo work karna lagaga.
+
+-- Ab maina apna shop par 5 helper rakgh liya.
+jisa client ayaga usi ka hisab sa mera helper kaam karaga nahi to wait karaga apna turn ana ka.
+
+
+WHY WE USE THREAD POOL ::
+
+-Resource Management.
+-Response time.
+-Control over Thread Count.
+
+Thread creation costly hota hai (time & memory lagta hai)
+Zyada threads system slowdown kar sakti hain (CPU overhead badhta hai)
+Thread reuse se performance improve hoti hai (efficient resource utilization)
+
+
+
+EXECUTOR FRAMEWORK ::
+- Introduced in java 5.
+- It is part of java.util.concurrent package to simplify the development of concurrent application by abstracting
+  away many of the complexities involved in creating and managing threads.
+
+BEFORE EXECUTOR FRAMEWORK ::
+
+- Manual Thread Management.
+- Resource Management.
+- Scalability.
+- Thread Reuse.
+- Error Handling.
+
+
+EXECUTOR MAIN METHOD AND CLASS ::
+
+public interface ExecutorService extends Executor, AutoCloseable
+
+submit() :: ya method Thread jaisa working karta hai isma hum thread ki implementation
+               deta hai lambda sa aur koi bhi task perform kara sakta hai.
+ 3 type submit() overload ::
+1. Future<?> submit(Runnable task);
+2. <T> Future<T> submit(Callable<T> task);
+3. <T> Future<T> submit(Runnable task, T result);
+
+
+shutDown() ::  yeah method call karna ka bad sabhi thread ki execution stop ho jati hai means thread done ho jata hai.
+                after shutDown you have not submit()  any task.
+
+
+awaitTermination() :: awaitTermination(10 , TimeUnit,SECONDS) yeah limited time  tak wait karaga jab tak sabhi thread
+                      complete na ho jaya aur  shutDown() na ho jaya 10 sec ka andar.
+                      AGAR time 10 sec ka upar lag rha hai to bo age badh jayaga aur shutDown() hona ka wait nahi karaga.
+
+
+
+
+
+
+
+
