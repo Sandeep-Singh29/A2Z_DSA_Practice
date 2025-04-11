@@ -1,6 +1,6 @@
 package com.practice;
 
-import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,6 @@ public class Testtt {
         Map<String, Long> collect = Arrays.stream(s.split(" ")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         List<Map.Entry<String, Long>> list = collect.entrySet().stream().filter(e -> e.getValue() == 2).toList();
         System.out.println(list);
-
 
     }
 }

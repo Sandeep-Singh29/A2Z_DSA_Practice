@@ -11,7 +11,7 @@ import java.util.List;
 public class LimitinList {
     public static void main(String[] args) {
         List<Integer> integers = List.of(1, 2, 3, 5, 6, 7);
-        List<Integer> list = integers.stream().limit(1).toList();
+        List<Integer> list = integers.stream().limit(2).toList();
         System.out.println(list);
 
         // Using limit we have find the 2 largest elemnt

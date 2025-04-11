@@ -1,0 +1,162 @@
+LIST :: List is a interface
+
+✅ Summary:
+Before JAVA JDK 21 List
+public interface List<E> extends Collection<E>
+After JAVA JDK 21 List
+public interface List<E> extends SequencedCollection<E>
+public interface SequencedCollection<E> extends Collection<E> {
+
+
+
+List ::
+       ├── ArrayList
+       ├── LinkedList
+       ├── Vector
+       ├── Stack
+       └── CopyOnWriteArrayList
+
+
+}
+
+✅✅ ARRAYLIST ✅✅
+
+> ArrayList is a Class?
+> ArrayList ek dynamic array hota hai.
+> Ye java.util package ka part hai.
+> Normal array ka size fixed hota hai, lekin ArrayList ka size automatically badhta hai jab data add karte ho.
+> Default capacity is 10
+> ❌ Thread-Safe Nahi Hai
+
+🧠 ArrayList – Time Complexity Summary
+
+Operation	    Time        Complexity
+
+get(index)	    O(1)	    Direct index se value nikaalta hai – fast
+add(element)	O(1)        (amortized)	End me add kare to fast hai, lekin kabhi kabhi resize hota hai
+add(index, e)	O(n)	    Beech me add kare to elements ko shift karna padta hai
+remove(index)	O(n)	    Remove karne ke baad shift karna padta hai
+remove(value)	O(n)	    Value dhoondhne ke liye linear search hota hai
+contains(val)	O(n)	    Pura list check karega match ke liye
+
+
+
+✅✅ LINKEDLIST ✅✅
+
+🔗 Types of LinkedList
+🔹 1. Singly Linked List
+🔹 2. Doubly Linked List
+🔹 3. Circular Linked List :: 🌀 Singly Circular  and 🌀 Doubly Circular
+
+
+🔗 LinkedList in Java – Basic Info
+LinkedList is a doubly linked list in Java.
+Elements memory me alag-alag jagah par hote hain, aur har element ke paas NEXT aur PREVIOUS ka reference hota hai.
+Ye List aur Deque dono ko implement karta hai.
+Ye insertion aur deletion me fast hota hai (specially start ya end se).
+
+
+🧠 LinkedList Time Complexity Table
+
+Operation	                        Time            Complexity
+
+addFirst() / addLast()	            O(1)	        Start/end pe directly pointer se insert hota hai
+add(index, element)	                O(n)	        Index tak pahuchne ke liye traversal lagta hai
+get(index)	                        O(n)	        Index se pahuchne ke liye poora list traverse karna padta hai
+set(index, element)     	        O(n)	        Same as get – pahuchne ke liye traverse
+removeFirst() / removeLast()	    O(1)	        Directly head/tail se hata sakte ho
+remove(index)	                    O(n)	        Index tak pahuchna padta hai
+contains(value)                 	O(n)	        Ek-ek node check karega value ke liye
+
+
+
+
+✅✅ VECTOR ✅✅
+
+
+🔗 Vector in Java – Basic Info jdk 1.0
+same as ArrayList
+Dynamic Array
+Thread safe Because of Synchronized
+Random Access also.
+
+🧪 Vector vs ArrayList
+Feature         	    Vector	                          ArrayList
+Thread-safe	            ✅ Yes (synchronized)	            ❌ No
+Performance	            ❌ Slower                        	✅ Faster
+Used in         	    Legacy, multi-thread	            Modern apps
+Resize step	            Doubles capacity                	Grows by 50%
+
+
+
+✅✅ STACK ✅✅
+
+🧱 Stack in Java
+
+Stack ek LIFO (Last-In-First-Out) data structure hai.
+📦 Java me Stack ka implementation:
+Java me Stack ko use karne ke 2 main tareeke hote hain:
+✅ Legacy java.util.Stack class
+✅ Recommended: Deque interface using ArrayDeque (faster & better)
+
+
+
+🧠  Stack Operations & Time Complexity
+
+Operation	                    Description	                 Time Complexity	            Notes
+
+push()                      	Add element to top	         O(1)	                    Constant time insertion
+pop()	                        Remove element from top      O(1)	                    Constant time removal
+peek()	                        Look at top element          O(1)	                    Does not remove element
+isEmpty()	                    Check if stack is empty	     O(1)
+search() (legacy Stack only)	Search element	             O(n)	                    Linearly checks
+
+
+🛠️ Behind the scenes:
+Stack Type	            Internally Uses	            Thread-safe?	    Performance
+java.util.Stack	        Vector	                    ✅ Yes	            ❌ Slower
+ArrayDeque	            Resizable array	            ❌ No	            ✅ Faster
+
+
+
+
+
+✅✅ CopyOnWriteArrayList ✅✅
+
+🧠 What is CopyOnWriteArrayList?
+we have add element between the iteration >> but if we add element in arrayList or LinkedList they give me concurrentModificationException();
+✅ It is a thread-safe variant of ArrayList.
+Comes from package: java.util.concurrent
+Ye multi-threaded environment ke liye hota hai jahan read zyada hoti hai aur write kam.
+
+** Jab bhi list me write operation (like add/remove/set) hoti hai —
+🔄 Ye poori list ka ek new copy banata hai behind the scenes.
+
+✨ When to Use?
+Situation	                               Use CopyOnWriteArrayList?
+✅ Many threads reading	                     ✔️ YES
+❌ Many threads writing frequently	         ❌ NO — too slow
+✅ Low write, high read scenario	         ✔️ BEST use case
+
+
+📊 Time Complexity
+Operation	                Time Complexity
+get(index)	                O(1)
+add()	                    O(n) → because of copy
+remove()	                O(n) → because of copy
+contains()              	O(n)
+iteration	                O(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

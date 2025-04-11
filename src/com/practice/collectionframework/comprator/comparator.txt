@@ -1,0 +1,24 @@
+How to work compare();
+
+int compare(T o1, T o2);
+
+-------When we sorting perform in Integer Type------
+
+They need 2 parameter and return integer and based for integer sorting perform.
+
+1. if return -(Negative) to o1 is first and then o2.
+2. if return 0 both are same so no replace same preference.
+3. if return +(Positive) to o2 is first and then o1.
+
+
+if u need ASCENDING order o1-o2
+if u need DESCENDING order o2-o1
+
+
+-------When we sorting perform in String Type------
+o1.compareTo(o2); // ascending order
+o2.compareTo(o1); // descending order
+
+compareTo() method return a int also so they check the length of the o1 and o2 both and calculate
+same as integer sorting
+

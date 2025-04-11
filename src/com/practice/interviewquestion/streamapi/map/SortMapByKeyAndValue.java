@@ -27,8 +27,10 @@ public class SortMapByKeyAndValue {
         System.out.println(sortByKey);
 
         // All Phones In Ascending Order By Value
-        LinkedHashMap<String, Integer> sortByValue = phones.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(
-                Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        LinkedHashMap<String, Integer> sortByValue = phones.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new));
         System.out.println(sortByValue);
     }
 }

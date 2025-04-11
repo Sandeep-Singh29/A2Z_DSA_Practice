@@ -1,8 +1,10 @@
 package com.practice.interviewquestion.streamapi;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Author: Sandeep Singh
@@ -23,6 +25,11 @@ public class SumOfList {
         // USing Reduce
         Integer reduce = numbers.stream().reduce(0, Integer::max);
         System.out.println(reduce);
+
+        // Find MAX
+        Integer integer = numbers.stream().max(Integer::compareTo).orElse(0);
+        System.out.println(integer);
+
 
     }
 }
