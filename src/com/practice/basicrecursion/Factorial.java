@@ -3,7 +3,6 @@ package com.practice.basicrecursion;
 public class Factorial {
     public static void main(String[] args) {
         int n = 4;
-        int res = 0;
         int fac = facttorial(n);
         System.out.println(fac);
     }

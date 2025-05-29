@@ -53,7 +53,7 @@ public class LongestSubString_3 {
 
     public static void main(String[] args) {
         String str = "sandeep";
-        int substring = lengthOfLongestSubstring(str);
+        int substring = findLargestStrOptimalUsingMap(str);
         System.out.println(substring);
     }
 

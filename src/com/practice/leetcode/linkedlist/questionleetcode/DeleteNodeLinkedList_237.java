@@ -29,6 +29,6 @@ public class DeleteNodeLinkedList_237 {
         deleteNode(head, 5);
         Node.displayList(head);
 //        deleteNodeInLeetcode(head);
-        Node.displayList(head);
+//        Node.displayList(head);
     }
 }
