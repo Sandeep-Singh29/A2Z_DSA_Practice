@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class MaxContinueLetterReturnLength {
     public static void main(String[] args) {
-        String d = "abcbbcccccdddc";
+        String d = "abcbbcccccdddcppde";
         int len = findMaxLength(d);
         System.out.println(len);
     }
@@ -37,6 +37,7 @@ public class MaxContinueLetterReturnLength {
         for (char c : d.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
+        System.out.println(map);
         PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
         pq.addAll(map.entrySet());
         System.out.println(pq);
