@@ -50,9 +50,10 @@ public class ListofStudentConvertIntoMapAndGetHr {
 
 
         Map<String, Student> collect = list.stream().collect(Collectors.toMap(Student::getName, student -> student));
+        collect.entrySet().forEach(System.out::println);
         List<Student> collect1 = list.stream().filter(dep -> "hr".equals(dep.getDepartment())).collect(Collectors.toList());
         System.out.println(collect1);
-        collect1.stream().forEach(System.out::println);
+        collect1.forEach(System.out::println);
 
     }
 }

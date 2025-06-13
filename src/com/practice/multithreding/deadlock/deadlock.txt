@@ -10,10 +10,28 @@ Thread 2 tab tak process nhi karaga jab tak use PAPER na mil jaya.
 To is case main agar kisi ko kuch nahi milagag to ya wait state min rahage Aur isi ko DEADLOCK bolta hai.
 
 
-DEADLOCK Typically Occurs when four conditions are meet simultaneously.
+-----------------------------------------------------------------------
 
-1. Mutual Exclusion : Only one thread can access resource at a time.
-2. Hold And Wait : A thread holding at least one resource is waiting to acquire additional resources held by other thread.
-3. No Preemption : Resources cannot be forcibly taken from a thread holding them.
-4. Circular Wait : A set of threads is waiting for each other in a circular chain.
+DEADLOCK tab hota hai jab ye 4 conditions ek saath satisfy ho jaati hain:
+
+Mutual Exclusion:
+Ek samay par sirf ek thread hi kisi resource ko use kar sakta hai. Jab tak woh thread resource ko release nahi karta,
+doosra thread us resource ko access nahi kar sakta.
+
+Hold and Wait:
+Ek thread ek ya zyada resource ko hold kar raha hota hai aur doosre resource ke liye wait kar raha hota hai
+jo kisi aur thread ke paas hote hain.
+
+No Preemption:
+Kisi thread se resource zabardasti nahi liya ja sakta. Resource tabhi free hoga jab thread khud usse voluntarily release kare.
+
+Circular Wait:
+Multiple threads ek cycle mein ek doosre ka wait kar rahe hote hain. Jaise:
+
+Thread A ko resource B chahiye
+Thread B ko resource C chahiye
+Thread C ko resource A chahiye
+Is tarah ek circular chain ban jaati hai jahan har thread next wale ka wait kar raha hota hai.
+
+Agar ye 4 conditions ek saath mil jaati hain, to system deadlock mein chala jaata hai — matlab sab threads ruk jaate hain aur aage kaam nahi kar paate.
 

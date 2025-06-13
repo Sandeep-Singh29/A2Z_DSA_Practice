@@ -1,9 +1,6 @@
 package com.practice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -14,10 +11,13 @@ import java.util.stream.Collectors;
 
 public class Testtt {
     public static void main(String[] args) {
-        String s = "there is a free tree has leaves leaves are there green";// tree=2 leaves=2
-        Map<String, Long> collect = Arrays.stream(s.split(" ")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        List<Map.Entry<String, Long>> list = collect.entrySet().stream().filter(e -> e.getValue() == 2).toList();
-        System.out.println(list);
 
+        List<Integer> list = List.of(1, 3, 57, 5, 3, 2, 54, 7);
+
+       /* String str = new String();
+        String intern = str.intern();
+        System.out.println("intern value is : " + intern);
+        str = "Hello";
+        System.out.println("intern value is : " + str.intern());*/
     }
 }

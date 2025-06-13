@@ -19,16 +19,16 @@ public class FindMinimumInSortedArray_153 {
     }
 
     private static int findMinUsingBinary(int[] arr) {
-        int low = 0;
-        int high = arr.length - 1;
-        while (low < high) {
-            int mid = low + (high - low) / 2;
-            if (arr[mid] > arr[high]) {
-                low = mid + 1;
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] > arr[right]) {
+                left = mid + 1;
             } else {
-                high = mid;
+                right = mid;
             }
         }
-        return arr[high];
+        return arr[right];
     }
 }

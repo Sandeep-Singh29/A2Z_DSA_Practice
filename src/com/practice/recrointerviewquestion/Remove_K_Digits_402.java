@@ -44,6 +44,6 @@ public class Remove_K_Digits_402 {
         while (sb.length() > 1 && sb.charAt(0) == '0') {
             sb.deleteCharAt(0);
         }
-        return (sb.length() == 0) ? "0" : sb.toString();
+        return sb.isEmpty() ? "0" : sb.toString();
     }
 }

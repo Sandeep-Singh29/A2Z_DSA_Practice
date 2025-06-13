@@ -18,8 +18,7 @@ public class CountVowel {
         System.out.println(map);
         int count = 0;
         for (Map.Entry<Character, Integer> m : map.entrySet()) {
-            if (m.getKey() == 'a' || m.getKey() == 'e' || m.getKey() == 'i' ||
-                    m.getKey() == 'o' || m.getKey() == 'u') {
+            if (m.getKey() == 'a' || m.getKey() == 'e' || m.getKey() == 'i' || m.getKey() == 'o' || m.getKey() == 'u') {
                 count += m.getValue();
             }
         }
