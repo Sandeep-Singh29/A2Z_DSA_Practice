@@ -1,4 +1,4 @@
-package com.practice.leetcode.heaps;
+package com.practice.leetcode.priorityqueue;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

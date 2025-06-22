@@ -1,36 +1,31 @@
 package com.practice.leetcode.binarysearch;
 
+import java.util.Arrays;
+
 public class KokoEatingBanana_875 {
 
-    private static int minEatingSpeed(int[] piles, int h) {
-        int high = 0;
-        for (int i = 0; i < piles.length; i++) {
-            high = Math.max(high, piles[i]);
+    public static boolean canEatAll(int[] piles, int givenHour, int h) {
+        int totalTimeTaken = 0;
+        for (int x : piles) {
+            totalTimeTaken += x / givenHour;
+            if (x % givenHour != 0)
+                totalTimeTaken++;
         }
-        int low = 1;
-        int ans = -1;
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            if (canEatBanana(piles, mid, h)) {
-                ans = mid;
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
-        }
-        return ans;
-//        return low;
+        return totalTimeTaken <= h;
     }
 
-    private static boolean canEatBanana(int[] piles, int givenHours, int h) {
-        int actualHours = 0;
-        for (int v : piles) {
-            actualHours += v / givenHours;
-            if (v % givenHours != 0) {
-                actualHours++;
+    public static int minEatingSpeed(int[] piles, int h) {
+        int l = 1;
+        int r = Arrays.stream(piles).max().getAsInt();
+        while (l < r) {
+            int perHours = l + (r - l) / 2;
+            if (canEatAll(piles, perHours, h)) {
+                r = perHours;
+            } else {
+                l = perHours + 1;
             }
         }
-        return actualHours <= h;
+        return l;
     }
 
     public static void main(String[] args) {

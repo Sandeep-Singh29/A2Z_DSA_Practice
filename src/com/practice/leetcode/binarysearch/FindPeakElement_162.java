@@ -1,6 +1,7 @@
 package com.practice.leetcode.binarysearch;
 
 public class FindPeakElement_162 {
+
     public static int findPeakElementUsingBinarySearch(int[] nums) {
         if (nums.length == 1) return 0;
         if (nums[0] > nums[1]) return 0;

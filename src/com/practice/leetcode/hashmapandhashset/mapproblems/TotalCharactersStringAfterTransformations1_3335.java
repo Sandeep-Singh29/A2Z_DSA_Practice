@@ -76,7 +76,6 @@ public class TotalCharactersStringAfterTransformations1_3335 {
         for (char ch : s.toCharArray()) {
             mp[ch - 'a']++;
         }
-
         for (int count = 1; count <= t; count++) {
             int[] temp = new int[26];
             for (int i = 0; i < 26; i++) {
@@ -89,7 +88,6 @@ public class TotalCharactersStringAfterTransformations1_3335 {
                     temp['b' - 'a'] = (temp['b' - 'a'] + freq) % M;
                 }
             }
-
             mp = temp;
         }
         int result = 0;

@@ -2,40 +2,41 @@ package com.practice.leetcode.binarysearch;
 
 public class CapacityOfShip_1011 {
 
-    private static int shipWithinDays(int[] weights, int days) {
-        int low = Integer.MIN_VALUE, high = 0;
-        for (int i = 0; i < weights.length; i++) {
-            high += weights[i];
-            low = Math.max(low, weights[i]);
+    public static int shipWithinDays(int[] weights, int days) {
+        int maxWeight = Integer.MIN_VALUE;
+        int sumOfWeight = 0;
+        for (int weight : weights) {
+            sumOfWeight += weight;
+            maxWeight = Math.max(weight, maxWeight);
         }
-        int ans = 0;
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            int numberOfDays = findDays(weights, mid);
+        int minCapacity = 0;
+        while (maxWeight <= sumOfWeight) {
+            int capacity = maxWeight+(sumOfWeight-maxWeight) / 2;
+            int numberOfDays = findNumberOfDays(weights, capacity);
             if (numberOfDays <= days) {
-                ans = mid;
-                high = mid - 1;
+                minCapacity = capacity;
+                sumOfWeight = capacity - 1;
             } else {
-                low = mid + 1;
+                maxWeight = capacity + 1;
             }
         }
-        return ans;
+        return minCapacity;
     }
 
-    private static boolean isShiping(int[] weights, int capacity, int days) {
+    public static int findNumberOfDays(int[] weight, int capacity) {
+        int day = 1;
         int load = 0;
-        int totalConsumeDays = 1;
-        for (int i = 0; i < weights.length; i++) {
-            if (load + weights[i] > capacity) {
-                totalConsumeDays++;
-                load = weights[i];
+        int n = weight.length;
+        for (int i = 0; i < n; i++) {
+            if (weight[i] + load > capacity) {
+                day++;
+                load = weight[i];
             } else {
-                load += weights[i];
+                load += weight[i];
             }
         }
-        return totalConsumeDays <= days;
+        return day;
     }
-
 
     private static int leastWeightCapacityBrute(int[] weights, int d) {
         int maxi = Integer.MIN_VALUE, sum = 0;
@@ -44,31 +45,17 @@ public class CapacityOfShip_1011 {
             maxi = Math.max(maxi, weights[i]);
         }
         for (int i = maxi; i <= sum; i++) {
-            if (findDays(weights, i) <= d) {
+            if (findNumberOfDays(weights, i) <= d) {
                 return i;
             }
         }
         return -1;
     }
 
-    private static int findDays(int[] weights, int cap) {
-        int days = 1; //First day.
-        int load = 0;
-        int n = weights.length; //size of array.
-        for (int i = 0; i < n; i++) {
-            if (load + weights[i] > cap) {
-                days += 1; //move to next day
-                load = weights[i]; //load the weight.
-            } else {
-                //load the weight on the same day.
-                load += weights[i];
-            }
-        }
-        return days;
-    }
+
 
     public static void main(String[] args) {
-        int arr[] = {3, 2, 2, 4, 1, 4}, days = 3;
+        int arr[] = {10,50,100,100,50,100,100,100}, days = 5;
         int shipped = shipWithinDays(arr, days);
         System.out.println(shipped);
         int leastWeightCapacity = leastWeightCapacityBrute(arr, days);
