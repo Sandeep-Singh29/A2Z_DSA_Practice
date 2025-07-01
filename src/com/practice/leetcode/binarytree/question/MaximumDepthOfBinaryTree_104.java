@@ -1,5 +1,8 @@
 package com.practice.leetcode.binarytree.question;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Author: Sandeep Singh
  * Date: 18/06/25
@@ -20,16 +23,41 @@ public class MaximumDepthOfBinaryTree_104 {
         b.left = e;
         b.right = f;
         int maxDepth = maxDepthOfNode(root);
+        int usingBFS = maxDepthUsingBFS(root);
         System.out.println(maxDepth);
+        System.out.println(usingBFS);
+    }
+
+    private static int maxDepthUsingBFS(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+        int level = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            while (size > 0) {
+                Node peekElement = queue.poll();
+                if (peekElement.left != null) {
+                    queue.offer(root.left);
+                }
+                if (peekElement.right != null) {
+                    queue.offer(peekElement.right);
+                }
+                size--;
+            }
+            if (!queue.isEmpty()) {
+                level++;
+            }
+        }
+        return (level + 1);
     }
 
     private static int maxDepthOfNode(Node root) {
         if (root == null) return 0;
-
         int left = maxDepthOfNode(root.left);
-
         int right = maxDepthOfNode(root.right);
-
         return 1 + Math.max(left, right);
     }
 

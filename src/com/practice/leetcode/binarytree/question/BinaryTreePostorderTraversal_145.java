@@ -24,13 +24,13 @@ public class BinaryTreePostorderTraversal_145 {
             } else if (stack.peek().right != null) {
                 node = stack.peek().right;
             } else {
-                Node temp = stack.pop();
+                Node deleteNode = stack.pop();
                 // add element into result
-                result.add(temp.data);
+                result.add(deleteNode.data);
                 // Backtrack aur root process (jab right complete ho gaya ho)
-                while (!stack.isEmpty() && temp == stack.peek().right) {
-                    temp = stack.pop();
-                    result.add(temp.data);
+                while (!stack.isEmpty() && deleteNode == stack.peek().right) {
+                    deleteNode = stack.pop();
+                    result.add(deleteNode.data);
                 }
             }
         }
