@@ -11,6 +11,11 @@ interface Vehicle {
     String getName();
 
 }
+@FunctionalInterface
+interface Calculator{
+    int add(int a,int b);
+}
+
 
 public class LambdaExpression {
     public static void main(String[] args) {
@@ -21,6 +26,9 @@ public class LambdaExpression {
         };
         System.out.println(vehicle.getName());
 
+        Calculator cal = (a,b)-> a+b;
+        int add = cal.add(4, 4);
+        System.out.println(add);
 
     }
 }
